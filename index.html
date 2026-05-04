@@ -1,73 +1,738 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasca — Privacy Policy</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
-            line-height: 1.7;
-            color: #1d1d1f;
-            background: #fbfbfd;
-            padding: 2rem 1.25rem;
-            max-width: 720px;
-            margin: 0 auto;
-        }
-        h1 { font-size: 2rem; font-weight: 700; margin-bottom: .25rem; }
-        h2 { font-size: 1.15rem; font-weight: 600; margin-top: 2rem; margin-bottom: .5rem; }
-        p, li { font-size: .95rem; color: #333; }
-        ul { padding-left: 1.25rem; margin-top: .25rem; }
-        li { margin-bottom: .25rem; }
-        .subtitle { color: #86868b; font-size: .85rem; margin-bottom: 2rem; }
-        a { color: #0066cc; text-decoration: none; }
-        footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e5e5; font-size: .8rem; color: #86868b; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F6F3EC" />
+  <title data-titles='{"it":"Taska — Le tue finanze, mese per mese","en":"Taska — Your finances, month by month"}'>Taska — Le tue finanze, mese per mese</title>
+  <meta name="description" content="Taska è l'app iPhone per gestire le finanze personali con semplicità. Pianifica, traccia, analizza. Tutto resta sul tuo dispositivo." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p class="subtitle">Tasca — App per la gestione delle finanze personali<br>Titolare: Pasquale Aceto<br>Ultimo aggiornamento: aprile 2026</p>
 
-    <h2>1. Raccolta dei dati</h2>
-    <p>Tasca <strong>non raccoglie, trasmette o condivide alcun dato personale</strong>. Tutti i dati inseriti nell'app (conti, spese, categorie, saldi) sono salvati esclusivamente sul tuo dispositivo tramite il framework SwiftData di Apple.</p>
+<!-- ===================== NAV ===================== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/icon.png" alt="Taska" />
+      <span>Taska</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features" data-lang="it" class="active-lang">Funzioni</a>
+      <a href="#features" data-lang="en">Features</a>
+      <a href="#how" data-lang="it" class="active-lang">Come funziona</a>
+      <a href="#how" data-lang="en">How it works</a>
+      <a href="#pricing" data-lang="it" class="active-lang">Prezzi</a>
+      <a href="#pricing" data-lang="en">Pricing</a>
+      <a href="support.html" data-lang="it" class="active-lang">Supporto</a>
+      <a href="support.html" data-lang="en">Support</a>
+      <span class="lang-switch" role="group" aria-label="Language">
+        <button data-set-lang="it" class="active">IT</button>
+        <button data-set-lang="en">EN</button>
+      </span>
+      <a class="btn-cta" href="#download">
+        <span data-lang="it" class="active-lang">Scarica</span>
+        <span data-lang="en">Download</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</nav>
 
-    <h2>2. Archiviazione locale</h2>
-    <p>I tuoi dati risiedono nel sandbox dell'app sul dispositivo. Nessuna informazione viene inviata a server esterni, servizi cloud o terze parti. I backup vengono creati localmente e condivisi solo se l'utente li esporta manualmente.</p>
+<!-- ===================== HERO ===================== -->
+<header class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eye eyebrow">
+        <span class="dot"></span>
+        <span data-lang="it" class="active-lang">Disponibile su App Store</span>
+        <span data-lang="en">Available on the App Store</span>
+      </div>
 
-    <h2>3. Widget</h2>
-    <p>Il widget della schermata Home e della schermata di blocco legge i dati tramite un App Group locale. Nessun dato lascia il dispositivo.</p>
+      <h1 class="h-display h-1 hero-headline">
+        <span data-lang="it" class="active-lang">Le tue finanze,<br /><em>mese per mese.</em></span>
+        <span data-lang="en">Your finances,<br /><em>month by month.</em></span>
+      </h1>
 
-    <h2>4. Sicurezza e autenticazione</h2>
-    <p>L'accesso all'app può essere protetto con Face ID, Touch ID o un PIN dedicato. Tasca utilizza il framework LocalAuthentication di Apple; nessuna credenziale biometrica viene memorizzata o elaborata dall'app.</p>
+      <p class="hero-sub">
+        <span data-lang="it" class="active-lang">Pianifica le spese, traccia i tuoi conti e capisci dove vanno i tuoi soldi. Tutto sul tuo iPhone, tutto sotto controllo.</span>
+        <span data-lang="en">Plan your expenses, track your accounts and see where your money goes. All on your iPhone, all under control.</span>
+      </p>
 
-    <h2>5. Notifiche</h2>
-    <p>Le notifiche di Tasca sono esclusivamente locali, generate dal dispositivo senza coinvolgere server esterni.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#download">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          <span data-lang="it" class="active-lang">Scarica per iPhone</span>
+          <span data-lang="en">Download for iPhone</span>
+        </a>
+        <a class="btn-ghost" href="#how">
+          <span data-lang="it" class="active-lang">Scopri come funziona</span>
+          <span data-lang="en">See how it works</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M9 6l6 6-6 6"/></svg>
+        </a>
+      </div>
 
-    <h2>6. Servizi di terze parti</h2>
-    <p>Tasca non integra SDK di analisi, pubblicità, tracciamento, crash reporting né altri servizi di terze parti.</p>
+      <div class="hero-meta">
+        <span data-lang="it" class="active-lang">14 giorni di prova</span>
+        <span data-lang="en">14-day trial</span>
+        <span data-lang="it" class="active-lang">Dati sul tuo iPhone</span>
+        <span data-lang="en">Data on your iPhone</span>
+        <span data-lang="it" class="active-lang">Disdici quando vuoi</span>
+        <span data-lang="en">Cancel anytime</span>
+      </div>
+    </div>
 
-    <h2>7. Dati raccolti — riepilogo</h2>
-    <ul>
-        <li>Dati personali raccolti: <strong>nessuno</strong></li>
-        <li>Dati condivisi con terze parti: <strong>nessuno</strong></li>
-        <li>Tracciamento utente: <strong>nessuno</strong></li>
-    </ul>
+    <div class="hero-visual">
+      <!-- Floating cards (decorative) -->
+      <div class="float-card f1">
+        <div class="ic" style="background:#E8F2FF">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1FA4FF" stroke-width="2" style="width:16px;height:16px"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </div>
+        <div>
+          <div class="lbl" data-lang="it" style="display:block">Budget mese</div>
+          <div class="lbl" data-lang="en">Monthly budget</div>
+          <div class="val">€ 1.420</div>
+        </div>
+      </div>
 
-    <h2>8. Minori</h2>
-    <p>Tasca non è destinata a minori di 13 anni e non raccoglie consapevolmente dati da minori.</p>
+      <div class="float-card f2">
+        <div class="ic" style="background:#E8F8EE">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2EA86A" stroke-width="2" style="width:16px;height:16px"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div>
+          <div class="lbl" data-lang="it" style="display:block">Risparmiato</div>
+          <div class="lbl" data-lang="en">Saved</div>
+          <div class="val" style="color:#2EA86A">+ € 240</div>
+        </div>
+      </div>
 
-    <h2>9. Conformità normativa</h2>
-    <p>Tasca è progettata nel rispetto del Regolamento Generale sulla Protezione dei Dati (GDPR — UE 2016/679) e del California Consumer Privacy Act (CCPA). Poiché non vengono raccolti dati personali, non vi sono dati da richiedere, modificare o cancellare.</p>
+      <div class="float-card f3">
+        <div class="ic" style="background:#FBF0E8">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E07800" stroke-width="2" style="width:16px;height:16px"><path d="M12 2v6M12 22v-2M4.93 4.93l4.24 4.24M19.07 19.07l-4.24-4.24M2 12h6M22 12h-2"/></svg>
+        </div>
+        <div>
+          <div class="lbl" data-lang="it" style="display:block">Spese ricorrenti</div>
+          <div class="lbl" data-lang="en">Recurring</div>
+          <div class="val">12</div>
+        </div>
+      </div>
 
-    <h2>10. Modifiche alla policy</h2>
-    <p>Eventuali aggiornamenti a questa privacy policy saranno comunicati tramite aggiornamento dell'app e pubblicati su questa pagina.</p>
+      <!-- iPhone mockup with screenshot placeholder -->
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <!-- ⬇️ SOSTITUISCI: <img class="phone-screenshot" src="assets/mockups/dashboard.png" alt="Taska Dashboard" /> -->
+          <div class="phone-placeholder">
+            <strong style="font-size:14px;color:#0A1240;font-family:'Fraunces',serif;font-weight:500;letter-spacing:-0.01em;margin-bottom:8px">SCREENSHOT</strong>
+            assets/mockups/<br/>dashboard.png
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
-    <h2>11. Contatti</h2>
-    <p>Per domande sulla privacy: <a href="mailto:tasca.app.support@gmail.com">tasca.app.support@gmail.com</a></p>
+<!-- ===================== STRIP ===================== -->
+<div class="strip">
+  <div class="strip-track">
+    <span data-lang="it" class="active-lang">Pianifica</span>
+    <span data-lang="it" class="active-lang">Traccia</span>
+    <span data-lang="it" class="active-lang">Analizza</span>
+    <span data-lang="it" class="active-lang">Risparmia</span>
+    <span data-lang="it" class="active-lang">Pianifica</span>
+    <span data-lang="it" class="active-lang">Traccia</span>
+    <span data-lang="it" class="active-lang">Analizza</span>
+    <span data-lang="it" class="active-lang">Risparmia</span>
 
-    <footer>
-        <p>&copy; 2026 Pasquale Aceto. Tutti i diritti riservati.</p>
-    </footer>
+    <span data-lang="en">Plan</span>
+    <span data-lang="en">Track</span>
+    <span data-lang="en">Analyze</span>
+    <span data-lang="en">Save</span>
+    <span data-lang="en">Plan</span>
+    <span data-lang="en">Track</span>
+    <span data-lang="en">Analyze</span>
+    <span data-lang="en">Save</span>
+  </div>
+</div>
+
+<!-- ===================== FEATURES ===================== -->
+<section class="section wrap" id="features">
+  <div class="sec-head reveal">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>
+        <span data-lang="it" class="active-lang">Cosa puoi fare</span>
+        <span data-lang="en">What you can do</span>
+      </div>
+    </div>
+    <div>
+      <h2 class="h-display h-2">
+        <span data-lang="it" class="active-lang">Strumenti chiari per <em>decisioni serene.</em></span>
+        <span data-lang="en">Clear tools for <em>peaceful decisions.</em></span>
+      </h2>
+      <p class="lead" style="margin-top:24px">
+        <span data-lang="it" class="active-lang">Tutto quello che ti serve per gestire un mese di spese, senza complicazioni e senza fogli di calcolo.</span>
+        <span data-lang="en">Everything you need to manage a month of expenses, without spreadsheets or headaches.</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="bento">
+
+    <!-- Big tile: Plan & Track -->
+    <article class="tile span-3 tall reveal">
+      <div class="num">01 / 09</div>
+      <h3>
+        <span data-lang="it" class="active-lang">Pianifica e traccia</span>
+        <span data-lang="en">Plan & Track</span>
+      </h3>
+      <p>
+        <span data-lang="it" class="active-lang">Inserisci le spese previste a inizio mese, poi collega quelle effettive man mano che le sostieni. Sai sempre quanto ti resta, voce per voce.</span>
+        <span data-lang="en">Set planned expenses at the start of the month, then link the actual ones as they happen. You always know what's left, item by item.</span>
+      </p>
+      <div class="visual">
+        <div class="viz-budget">
+          <div>
+            <div class="viz-row"><span data-lang="it" class="active-lang">Affitto</span><span data-lang="en">Rent</span><span>€ 800 / 800</span></div>
+            <div class="viz-bar"><span style="width:100%;background:linear-gradient(90deg,#2EA86A,#34C759)"></span></div>
+          </div>
+          <div>
+            <div class="viz-row"><span data-lang="it" class="active-lang">Spesa</span><span data-lang="en">Groceries</span><span>€ 320 / 400</span></div>
+            <div class="viz-bar"><span style="width:80%"></span></div>
+          </div>
+          <div>
+            <div class="viz-row"><span data-lang="it" class="active-lang">Tempo libero</span><span data-lang="en">Leisure</span><span>€ 180 / 150</span></div>
+            <div class="viz-bar"><span style="width:100%;background:linear-gradient(90deg,#D9483C,#FF3B30)"></span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Charts -->
+    <article class="tile span-3 reveal">
+      <div class="num">02 / 09</div>
+      <h3>
+        <span data-lang="it" class="active-lang">Grafici e report</span>
+        <span data-lang="en">Charts & reports</span>
+      </h3>
+      <p>
+        <span data-lang="it" class="active-lang">Trend su 6 mesi, distribuzione per categoria, confronto Budget vs Reale. Capisci dove vanno i tuoi soldi.</span>
+        <span data-lang="en">6-month trends, category breakdowns, Budget vs Actual. Understand where your money goes.</span>
+      </p>
+      <div class="visual">
+        <div class="viz-chart">
+          <i style="height:40%"></i>
+          <i style="height:65%"></i>
+          <i style="height:50%"></i>
+          <i style="height:80%"></i>
+          <i style="height:55%"></i>
+          <i style="height:90%"></i>
+        </div>
+      </div>
+    </article>
+
+    <!-- Recurring -->
+    <article class="tile span-2 reveal">
+      <div class="num">03 / 09</div>
+      <h3>
+        <span data-lang="it" class="active-lang">Spese ricorrenti</span>
+        <span data-lang="en">Recurring</span>
+      </h3>
+      <p>
+        <span data-lang="it" class="active-lang">Affitto, abbonamenti, bollette: imposta una volta, ogni mese sono già lì.</span>
+        <span data-lang="en">Rent, subscriptions, bills: set them once, they're back every month.</span>
+      </p>
+      <div class="visual viz-pill-row">
+        <span class="viz-pill blue">Netflix · 12.99</span>
+        <span class="viz-pill blue">Gym · 39.00</span>
+        <span class="viz-pill blue" data-lang="it" style="display:inline-flex">Affitto · 800</span>
+        <span class="viz-pill blue" data-lang="en">Rent · 800</span>
+      </div>
+    </article>
+
+    <!-- Categories -->
+    <article class="tile span-2 reveal">
+      <div class="num">04 / 09</div>
+      <h3>
+        <span data-lang="it" class="active-lang">Categorie</span>
+        <span data-lang="en">Categories</span>
+      </h3>
+      <p>
+        <span data-lang="it" class="active-lang">Predefinite o personalizzate, con icone e colori. Organizza tutto a modo tuo.</span>
+        <span data-lang="en">Default or custom, with icons and colors. Organize everything your way.</span>
+      </p>
+      <div class="visual">
+        <div class="viz-icons">
+          <div class="ic" style="background:#1FA4FF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+          <div class="ic" style="background:#7C6AF5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8v8M12 6v12M8 10v4"/></svg></div>
+          <div class="ic" style="background:#2EA86A"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 17l10 5 10-5M2 12l10 5 10-5M12 2L2 7l10 5 10-5z"/></svg></div>
+          <div class="ic" style="background:#FF9500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Accounts -->
+    <article class="tile span-2 reveal">
+      <div class="num">05 / 09</div>
+      <h3>
+        <span data-lang="it" class="active-lang">Conti & banche</span>
+        <span data-lang="en">Accounts & banks</span>
+      </h3>
+      <p>
+        <span data-lang="it" class="active-lang">Conti correnti, carte e contanti. Taska riconosce la tua banca e mostra il logo.</span>
+        <span data-lang="en">Bank accounts, cards and cash. Taska recognizes your bank and shows the logo.</span>
+      </p>
+      <div class="visual">
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span class="viz-pill" style="background:var(--ink);color:var(--cream);border-color:var(--ink)">Intesa</span>
+          <span class="viz-pill" style="background:var(--ink);color:var(--cream);border-color:var(--ink)">Revolut</span>
+          <span class="viz-pill" style="background:var(--ink);color:var(--cream);border-color:var(--ink)">N26</span>
+          <span class="viz-pill" style="background:var(--ink);color:var(--cream);border-color:var(--ink)">PostePay</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Privacy -->
+    <article class="tile span-3 reveal">
+      <div class="num">06 / 09</div>
+      <h3>
+        <span data-lang="it" class="active-lang">I tuoi dati restano tuoi</span>
+        <span data-lang="en">Your data stays yours</span>
+      </h3>
+      <p>
+        <span data-lang="it" class="active-lang">Niente server, niente analitiche, nessun tracciamento. Tutto è salvato sul tuo iPhone. Backup opzionale solo nel tuo iCloud personale.</span>
+        <span data-lang="en">No servers, no analytics, no tracking. Everything is stored on your iPhone. Optional backup only to your personal iCloud.</span>
+      </p>
+      <div class="visual">
+        <div class="viz-lock">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+      </div>
+    </article>
+
+    <!-- Widget -->
+    <article class="tile span-3 reveal">
+      <div class="num">07 / 09</div>
+      <h3>
+        <span data-lang="it" class="active-lang">Widget &amp; Spesa rapida</span>
+        <span data-lang="en">Widgets &amp; Quick add</span>
+      </h3>
+      <p>
+        <span data-lang="it" class="active-lang">Aggiungi spese dalla Lock Screen, dal Centro di Controllo o tenendo premuto sull'icona dell'app. Un secondo e via.</span>
+        <span data-lang="en">Add expenses from the Lock Screen, Control Center or by long-pressing the app icon. One second, done.</span>
+      </p>
+      <div class="visual" style="display:flex;gap:8px">
+        <div style="flex:1;background:var(--cream);border:1px solid var(--rule-soft);border-radius:14px;padding:14px;min-height:90px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.08em;color:var(--ink-mute);text-transform:uppercase">Lock Screen</div>
+          <div style="font-family:var(--display);font-size:22px;font-weight:500">€ 1.420</div>
+          <div style="height:4px;background:var(--rule-soft);border-radius:100px;overflow:hidden"><span style="display:block;height:100%;width:62%;background:linear-gradient(90deg,#1A237E,#1FA4FF)"></span></div>
+        </div>
+        <div style="flex:1;background:var(--ink);color:var(--cream);border-radius:14px;padding:14px;min-height:90px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.08em;color:rgba(246,243,236,0.6);text-transform:uppercase">Home</div>
+          <div style="font-family:var(--display);font-size:22px;font-weight:500;color:#1FA4FF">+ €240</div>
+          <div style="font-family:var(--mono);font-size:10px;color:rgba(246,243,236,0.6)" data-lang="it">risparmiato</div>
+          <div style="font-family:var(--mono);font-size:10px;color:rgba(246,243,236,0.6)" data-lang="en">saved</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Receipts -->
+    <article class="tile span-2 reveal">
+      <div class="num">08 / 09</div>
+      <h3>
+        <span data-lang="it" class="active-lang">Allega ricevute</span>
+        <span data-lang="en">Attach receipts</span>
+      </h3>
+      <p>
+        <span data-lang="it" class="active-lang">Fotografa lo scontrino e resta legato alla spesa. Hai sempre la prova.</span>
+        <span data-lang="en">Snap the receipt and keep it linked to the expense. Proof, always at hand.</span>
+      </p>
+      <div class="visual">
+        <div style="background:var(--cream);border:1px dashed var(--ink-mute);border-radius:12px;padding:16px;font-family:var(--mono);font-size:11px;color:var(--ink-mute);text-align:center;letter-spacing:0.04em">
+          <div style="font-family:var(--display);font-size:18px;color:var(--ink);margin-bottom:4px">SUPERMERCATO</div>
+          <div>04 / 05 / 2026</div>
+          <div style="margin-top:8px;font-family:var(--display);font-size:16px;color:var(--ink)">€ 47.20</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Backup -->
+    <article class="tile span-2 reveal">
+      <div class="num">09 / 09</div>
+      <h3>
+        <span data-lang="it" class="active-lang">Backup automatico</span>
+        <span data-lang="en">Auto backup</span>
+      </h3>
+      <p>
+        <span data-lang="it" class="active-lang">Salva una copia su iCloud personale o esporta in JSON / CSV.</span>
+        <span data-lang="en">Save to your personal iCloud, or export as JSON / CSV.</span>
+      </p>
+      <div class="visual viz-pill-row">
+        <span class="viz-pill green">iCloud</span>
+        <span class="viz-pill blue">JSON</span>
+        <span class="viz-pill blue">CSV</span>
+      </div>
+    </article>
+
+    <!-- Notifications -->
+    <article class="tile span-2 reveal">
+      <div class="num">+ <span data-lang="it" class="active-lang">extra</span><span data-lang="en">extra</span></div>
+      <h3>
+        <span data-lang="it" class="active-lang">Notifiche intelligenti</span>
+        <span data-lang="en">Smart notifications</span>
+      </h3>
+      <p>
+        <span data-lang="it" class="active-lang">Avvisi quando ti avvicini al limite di un budget e report mensili per non perdere il filo.</span>
+        <span data-lang="en">Get alerts when you near a budget limit, plus monthly reports to keep track.</span>
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="section wrap" id="how">
+  <div class="sec-head reveal">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>
+        <span data-lang="it" class="active-lang">Come funziona</span>
+        <span data-lang="en">How it works</span>
+      </div>
+    </div>
+    <div>
+      <h2 class="h-display h-2">
+        <span data-lang="it" class="active-lang">Tre passi. <em>Niente fogli di calcolo.</em></span>
+        <span data-lang="en">Three steps. <em>No spreadsheets.</em></span>
+      </h2>
+    </div>
+  </div>
+
+  <div class="steps reveal">
+    <div class="step">
+      <div class="badge">1</div>
+      <h4 data-lang="it" class="active-lang">Pianifica il mese</h4>
+      <h4 data-lang="en">Plan the month</h4>
+      <p data-lang="it" class="active-lang">Inserisci le spese previste e fissa un budget per categoria.</p>
+      <p data-lang="en">Add planned expenses and set a budget per category.</p>
+    </div>
+    <div class="step">
+      <div class="badge">2</div>
+      <h4 data-lang="it" class="active-lang">Registra durante il mese</h4>
+      <h4 data-lang="en">Track during the month</h4>
+      <p data-lang="it" class="active-lang">Aggiungi le spese effettive in un secondo, anche dal widget.</p>
+      <p data-lang="en">Log actual expenses in a second, even from the widget.</p>
+    </div>
+    <div class="step">
+      <div class="badge">3</div>
+      <h4 data-lang="it" class="active-lang">Capisci e migliora</h4>
+      <h4 data-lang="en">Understand & improve</h4>
+      <p data-lang="it" class="active-lang">Grafici e report ti mostrano dove sei andato bene e cosa correggere.</p>
+      <p data-lang="en">Charts and reports show what worked and what to adjust.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section class="section wrap" id="pricing">
+  <div class="pricing reveal">
+    <div class="pricing-head">
+      <div class="eyebrow"><span class="dot"></span>
+        <span data-lang="it" class="active-lang">Abbonamento</span>
+        <span data-lang="en">Subscription</span>
+      </div>
+      <h2 class="h-display h-2">
+        <span data-lang="it" class="active-lang"><em>14 giorni gratis.</em><br/>Poi scegli tu.</span>
+        <span data-lang="en"><em>14 days free.</em><br/>Then you choose.</span>
+      </h2>
+      <p>
+        <span data-lang="it" class="active-lang">Tutte le funzioni sbloccate per due settimane, senza inserire metodo di pagamento. Dopo, scegli il piano che ti torna comodo.</span>
+        <span data-lang="en">All features unlocked for two weeks, no payment method required. Then pick the plan that fits.</span>
+      </p>
+    </div>
+
+    <div class="plans">
+      <div class="plan">
+        <div class="plan-name" data-lang="it" style="display:block">Mensile</div>
+        <div class="plan-name" data-lang="en">Monthly</div>
+        <div class="plan-price"><span class="cur">€</span>0,99</div>
+        <div class="plan-period" data-lang="it" style="display:block">al mese</div>
+        <div class="plan-period" data-lang="en">per month</div>
+        <div class="plan-equiv" data-lang="it" style="display:block">Massima flessibilità</div>
+        <div class="plan-equiv" data-lang="en">Most flexible</div>
+      </div>
+
+      <div class="plan">
+        <div class="plan-name" data-lang="it" style="display:block">Trimestrale</div>
+        <div class="plan-name" data-lang="en">Quarterly</div>
+        <div class="plan-price"><span class="cur">€</span>2,49</div>
+        <div class="plan-period" data-lang="it" style="display:block">ogni 3 mesi</div>
+        <div class="plan-period" data-lang="en">every 3 months</div>
+        <div class="plan-equiv">≈ € 0,83 / mese</div>
+      </div>
+
+      <div class="plan">
+        <div class="plan-name" data-lang="it" style="display:block">Semestrale</div>
+        <div class="plan-name" data-lang="en">Half-yearly</div>
+        <div class="plan-price"><span class="cur">€</span>3,99</div>
+        <div class="plan-period" data-lang="it" style="display:block">ogni 6 mesi</div>
+        <div class="plan-period" data-lang="en">every 6 months</div>
+        <div class="plan-equiv">≈ € 0,67 / mese</div>
+      </div>
+
+      <div class="plan featured">
+        <div class="plan-tag" data-lang="it" style="display:block">Più conveniente</div>
+        <div class="plan-tag" data-lang="en">Best value</div>
+        <div class="plan-name" data-lang="it" style="display:block">Annuale</div>
+        <div class="plan-name" data-lang="en">Yearly</div>
+        <div class="plan-price"><span class="cur">€</span>6,99</div>
+        <div class="plan-period" data-lang="it" style="display:block">all'anno</div>
+        <div class="plan-period" data-lang="en">per year</div>
+        <div class="plan-equiv">≈ € 0,58 / mese</div>
+      </div>
+    </div>
+
+    <div class="pricing-cta">
+      <a class="btn-primary" href="#download" id="download">
+        <span data-lang="it" class="active-lang">Inizia la prova di 14 giorni</span>
+        <span data-lang="en">Start your 14-day trial</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <span class="small" data-lang="it" style="display:block">L'abbonamento si rinnova automaticamente, salvo disdetta. Disdici quando vuoi dalle Impostazioni Apple ID.</span>
+      <span class="small" data-lang="en">Auto-renews unless cancelled. Cancel anytime from your Apple ID settings.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRUST ===================== -->
+<section class="section wrap">
+  <div class="trust reveal">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>
+        <span data-lang="it" class="active-lang">Privacy by design</span>
+        <span data-lang="en">Privacy by design</span>
+      </div>
+      <h2 class="h-display h-2" style="margin-top:16px">
+        <span data-lang="it" class="active-lang">I tuoi soldi <em>li vedi solo tu.</em></span>
+        <span data-lang="en">Your money, <em>only you see it.</em></span>
+      </h2>
+      <p style="margin-top:24px;color:var(--ink-soft);max-width:440px;font-size:16px;line-height:1.6">
+        <span data-lang="it" class="active-lang">Taska è costruita sul principio che i dati finanziari restino dove devono restare: sul tuo iPhone. Niente compromessi.</span>
+        <span data-lang="en">Taska is built on a simple principle: financial data should stay where it belongs — on your iPhone. No compromises.</span>
+      </p>
+    </div>
+
+    <div class="trust-items">
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div>
+          <h5 data-lang="it" style="display:block">Zero server</h5>
+          <h5 data-lang="en">Zero servers</h5>
+          <p data-lang="it" style="display:block">Lo sviluppatore non gestisce server. Nessuno riceve i tuoi dati.</p>
+          <p data-lang="en">The developer runs no servers. No one receives your data.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg></div>
+        <div>
+          <h5 data-lang="it" style="display:block">Zero tracking</h5>
+          <h5 data-lang="en">Zero tracking</h5>
+          <p data-lang="it" style="display:block">Niente analitiche, niente pubblicità, niente identificatori.</p>
+          <p data-lang="en">No analytics, no ads, no identifiers.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div>
+          <h5 data-lang="it" style="display:block">Face ID, Touch ID, PIN</h5>
+          <h5 data-lang="en">Face ID, Touch ID, PIN</h5>
+          <p data-lang="it" style="display:block">Proteggi l'accesso all'app con biometria o un PIN dedicato.</p>
+          <p data-lang="en">Protect access with biometrics or a dedicated PIN.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+        <div>
+          <h5 data-lang="it" style="display:block">Conforme GDPR &amp; CCPA</h5>
+          <h5 data-lang="en">GDPR &amp; CCPA compliant</h5>
+          <p data-lang="it" style="display:block">Progettata nel rispetto delle normative europee e americane.</p>
+          <p data-lang="en">Designed in line with European and American regulations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section wrap">
+  <div class="sec-head reveal">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>
+        <span data-lang="it" class="active-lang">Domande frequenti</span>
+        <span data-lang="en">FAQ</span>
+      </div>
+    </div>
+    <div>
+      <h2 class="h-display h-2">
+        <span data-lang="it" class="active-lang">Risposte <em>brevi e oneste.</em></span>
+        <span data-lang="en">Short, <em>honest answers.</em></span>
+      </h2>
+    </div>
+  </div>
+
+  <div class="faq reveal">
+    <details>
+      <summary>
+        <span data-lang="it" class="active-lang">La prova di 14 giorni richiede una carta di credito?</span>
+        <span data-lang="en">Does the 14-day trial require a credit card?</span>
+        <span class="plus">+</span>
+      </summary>
+      <div class="faq-answer">
+        <span data-lang="it" class="active-lang">No. La prova è completamente gratuita e non richiede metodo di pagamento. Al termine, se vuoi continuare, scegli manualmente uno dei piani: nessun addebito automatico.</span>
+        <span data-lang="en">No. The trial is completely free and requires no payment method. When it ends, if you want to continue, you manually choose a plan — no automatic charges.</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span data-lang="it" class="active-lang">I miei dati finanziari escono dal mio iPhone?</span>
+        <span data-lang="en">Does my financial data ever leave my iPhone?</span>
+        <span class="plus">+</span>
+      </summary>
+      <div class="faq-answer">
+        <span data-lang="it" class="active-lang">No, mai. Tutto è salvato in locale tramite SwiftData di Apple. Solo se attivi tu l'opzione "Backup iCloud" un file viene salvato nel tuo iCloud Drive personale, accessibile solo a te.</span>
+        <span data-lang="en">No, never. Everything is stored locally via Apple's SwiftData. Only if you turn on "iCloud Backup" yourself does a file get saved to your personal iCloud Drive, accessible only by you.</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span data-lang="it" class="active-lang">Cosa succede se cambio iPhone?</span>
+        <span data-lang="en">What happens if I switch iPhone?</span>
+        <span class="plus">+</span>
+      </summary>
+      <div class="faq-answer">
+        <span data-lang="it" class="active-lang">Se hai attivato il backup iCloud, ritrovi i tuoi dati installando Taska sul nuovo dispositivo. In alternativa puoi esportare manualmente in JSON o CSV in qualsiasi momento.</span>
+        <span data-lang="en">If you've enabled iCloud Backup, you'll find your data again after installing Taska on the new device. Otherwise you can export manually as JSON or CSV at any time.</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span data-lang="it" class="active-lang">Posso disdire l'abbonamento?</span>
+        <span data-lang="en">Can I cancel my subscription?</span>
+        <span class="plus">+</span>
+      </summary>
+      <div class="faq-answer">
+        <span data-lang="it" class="active-lang">Sì, in qualsiasi momento dalle Impostazioni del tuo Apple ID, alla voce "Abbonamenti", oppure dalla scorciatoia "Gestisci" dentro l'app. Continui a usare l'app fino alla scadenza naturale del periodo già pagato.</span>
+        <span data-lang="en">Yes, anytime from your Apple ID settings under "Subscriptions", or via the "Manage" shortcut inside the app. You keep using the app until the natural end of the period you've already paid for.</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span data-lang="it" class="active-lang">Taska è disponibile su Android o Web?</span>
+        <span data-lang="en">Is Taska available on Android or Web?</span>
+        <span class="plus">+</span>
+      </summary>
+      <div class="faq-answer">
+        <span data-lang="it" class="active-lang">Al momento Taska è esclusivamente per iPhone. È costruita nativamente con SwiftUI e SwiftData per offrire la migliore esperienza possibile sull'ecosistema Apple.</span>
+        <span data-lang="en">Right now Taska is iPhone-only. It's built natively with SwiftUI and SwiftData to deliver the best possible experience on the Apple ecosystem.</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span data-lang="it" class="active-lang">Posso registrare spese in valute estere?</span>
+        <span data-lang="en">Can I record expenses in foreign currencies?</span>
+        <span class="plus">+</span>
+      </summary>
+      <div class="faq-answer">
+        <span data-lang="it" class="active-lang">Sì. Taska conserva l'importo originale e converte automaticamente nella tua valuta principale.</span>
+        <span data-lang="en">Yes. Taska keeps the original amount and converts it automatically to your main currency.</span>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final-cta reveal">
+  <h2 class="h-display h-2">
+    <span data-lang="it" class="active-lang">Prendi il controllo,<br/><em>oggi.</em></span>
+    <span data-lang="en">Take control,<br/><em>today.</em></span>
+  </h2>
+  <p class="lead">
+    <span data-lang="it" class="active-lang">14 giorni di accesso completo. Nessun addebito automatico. Nessuna sorpresa.</span>
+    <span data-lang="en">14 days of full access. No automatic charges. No surprises.</span>
+  </p>
+  <a class="btn-primary" href="https://apps.apple.com/app/taska" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+    <span data-lang="it" class="active-lang">Scarica Taska su App Store</span>
+    <span data-lang="en">Download Taska on the App Store</span>
+  </a>
+  <span class="small">
+    <span data-lang="it" class="active-lang">Solo per iPhone · iOS 17+ · Italiano &amp; English</span>
+    <span data-lang="en">iPhone only · iOS 17+ · English &amp; Italiano</span>
+  </span>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/icon.png" alt="" />
+          Taska
+        </div>
+        <p class="footer-tag">
+          <span data-lang="it" class="active-lang">Le tue finanze, mese per mese.</span>
+          <span data-lang="en">Your finances, month by month.</span>
+        </p>
+      </div>
+      <div>
+        <h6 data-lang="it" style="display:block">Prodotto</h6>
+        <h6 data-lang="en">Product</h6>
+        <ul>
+          <li><a href="index.html#features" data-lang="it" class="active-lang">Funzioni</a><a href="index.html#features" data-lang="en">Features</a></li>
+          <li><a href="index.html#pricing" data-lang="it" class="active-lang">Prezzi</a><a href="index.html#pricing" data-lang="en">Pricing</a></li>
+          <li><a href="index.html#how" data-lang="it" class="active-lang">Come funziona</a><a href="index.html#how" data-lang="en">How it works</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 data-lang="it" style="display:block">Aiuto</h6>
+        <h6 data-lang="en">Help</h6>
+        <ul>
+          <li><a href="support.html" data-lang="it" class="active-lang">Supporto</a><a href="support.html" data-lang="en">Support</a></li>
+          <li><a href="mailto:tasca.app.support@gmail.com">Email</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 data-lang="it" style="display:block">Legale</h6>
+        <h6 data-lang="en">Legal</h6>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html" data-lang="it" class="active-lang">Termini d'Uso</a><a href="terms.html" data-lang="en">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Pasquale Aceto · Roma, Italia</span>
+      <span>
+        <span data-lang="it" class="active-lang">Costruito con SwiftUI &amp; SwiftData</span>
+        <span data-lang="en">Built with SwiftUI &amp; SwiftData</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
