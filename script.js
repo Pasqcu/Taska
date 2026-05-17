@@ -24,6 +24,12 @@
     document.querySelectorAll('.lang-switch button').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.setLang === lang);
     });
+    // Swap language-aware hrefs (e.g. App Store IT vs US storefront)
+    const hrefKey = lang === 'it' ? 'hrefIt' : 'hrefEn';
+    document.querySelectorAll('[data-href-it][data-href-en]').forEach(el => {
+      const href = el.dataset[hrefKey];
+      if (href) el.setAttribute('href', href);
+    });
     localStorage.setItem(STORAGE_KEY, lang);
     const titleEl = document.querySelector('title[data-titles]');
     if (titleEl) {
