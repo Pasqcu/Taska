@@ -3,147 +3,123 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#F6F3EC" />
+  <meta name="theme-color" content="#000000" />
   <title data-titles='{"it":"Taska — Le tue finanze, mese per mese","en":"Taska — Your finances, month by month"}'>Taska — Le tue finanze, mese per mese</title>
   <meta name="description" content="Taska è l'app iPhone per gestire le finanze personali con semplicità. Pianifica, traccia, analizza. Tutto resta sul tuo dispositivo." />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
   <link rel="icon" type="image/png" href="assets/icon.png" />
   <link rel="apple-touch-icon" href="assets/icon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- ===================== NAV ===================== -->
-<nav class="nav">
+<!-- ============ NAV ============ -->
+<nav class="nav dark" id="nav">
   <div class="nav-inner">
-    <a class="brand" href="index.html">
-      <img src="assets/icon.png" alt="Taska" />
+    <a class="brand" href="index.html" aria-label="Taska">
+      <img src="assets/icon.png" alt="" />
       <span>Taska</span>
     </a>
-    <div class="nav-links">
-      <a href="#features" data-lang="it" class="active-lang">Funzioni</a>
-      <a href="#features" data-lang="en">Features</a>
-      <a href="#how" data-lang="it" class="active-lang">Come funziona</a>
-      <a href="#how" data-lang="en">How it works</a>
-      <a href="#pricing" data-lang="it" class="active-lang">Prezzi</a>
-      <a href="#pricing" data-lang="en">Pricing</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#funzioni" data-lang="it" class="active-lang">Funzioni</a>
+      <a href="#funzioni" data-lang="en">Features</a>
+
+      <a href="#come" data-lang="it" class="active-lang">Come funziona</a>
+      <a href="#come" data-lang="en">How it works</a>
+
+      <a href="#prezzi" data-lang="it" class="active-lang">Prezzi</a>
+      <a href="#prezzi" data-lang="en">Pricing</a>
+
       <a href="support.html" data-lang="it" class="active-lang">Supporto</a>
       <a href="support.html" data-lang="en">Support</a>
+
       <span class="lang-switch" role="group" aria-label="Language">
-        <button data-set-lang="it" class="active">IT</button>
-        <button data-set-lang="en">EN</button>
+        <button data-set-lang="it" class="active"><span>IT</span></button>
+        <button data-set-lang="en"><span>EN</span></button>
       </span>
-      <a class="btn-cta" href="#download">
+
+      <a class="nav-cta" href="#download">
         <span data-lang="it" class="active-lang">Scarica</span>
         <span data-lang="en">Download</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
     </div>
-    <button class="hamburger" aria-label="Menu"><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span></button>
   </div>
 </nav>
 
-<!-- ===================== HERO ===================== -->
-<header class="hero wrap">
-  <div class="hero-grid">
-    <div>
-      <div class="hero-eye eyebrow">
-        <span class="dot"></span>
-        <span data-lang="it" class="active-lang">Disponibile su App Store</span>
-        <span data-lang="en">Available on the App Store</span>
-      </div>
-
-      <h1 class="h-display h-1 hero-headline">
-        <span data-lang="it" class="active-lang">Le tue finanze,<br /><em>mese per mese.</em></span>
-        <span data-lang="en">Your finances,<br /><em>month by month.</em></span>
-      </h1>
-
-      <p class="hero-sub">
-        <span data-lang="it" class="active-lang">Pianifica le spese, traccia i tuoi conti e capisci dove vanno i tuoi soldi. Tutto sul tuo iPhone, tutto sotto controllo.</span>
-        <span data-lang="en">Plan your expenses, track your accounts and see where your money goes. All on your iPhone, all under control.</span>
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn-primary" href="#download">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-          <span data-lang="it" class="active-lang">Scarica per iPhone</span>
-          <span data-lang="en">Download for iPhone</span>
-        </a>
-        <a class="btn-ghost" href="#how">
-          <span data-lang="it" class="active-lang">Scopri come funziona</span>
-          <span data-lang="en">See how it works</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M9 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-
-      <div class="hero-meta">
-        <span data-lang="it" class="active-lang">14 giorni di prova</span>
-        <span data-lang="en">14-day trial</span>
-        <span data-lang="it" class="active-lang">Dati sul tuo iPhone</span>
-        <span data-lang="en">Data on your iPhone</span>
-        <span data-lang="it" class="active-lang">Disdici quando vuoi</span>
-        <span data-lang="en">Cancel anytime</span>
-      </div>
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">
+      <span class="dot"></span>
+      <span data-lang="it" class="active-lang">Disponibile su App Store</span>
+      <span data-lang="en">Available on the App Store</span>
     </div>
 
-    <div class="hero-visual">
-      <!-- Floating cards (decorative) -->
-      <div class="float-card f1">
-        <div class="ic" style="background:#E8F2FF">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1FA4FF" stroke-width="2" style="width:16px;height:16px"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-        </div>
-        <div>
-          <div class="lbl" data-lang="it" style="display:block">Budget mese</div>
-          <div class="lbl" data-lang="en">Monthly budget</div>
-          <div class="val">€ 1.420</div>
-        </div>
-      </div>
+    <h1 class="hero-title">
+      <span data-lang="it" class="active-lang">Taska.<br/><span class="grad">Mese dopo mese.</span></span>
+      <span data-lang="en">Taska.<br/><span class="grad">Month after month.</span></span>
+    </h1>
 
-      <div class="float-card f2">
-        <div class="ic" style="background:#E8F8EE">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#2EA86A" stroke-width="2" style="width:16px;height:16px"><path d="M20 6L9 17l-5-5"/></svg>
-        </div>
-        <div>
-          <div class="lbl" data-lang="it" style="display:block">Risparmiato</div>
-          <div class="lbl" data-lang="en">Saved</div>
-          <div class="val" style="color:#2EA86A">+ € 240</div>
-        </div>
-      </div>
+    <p class="hero-sub">
+      <span data-lang="it" class="active-lang">Pianifica le spese, traccia i conti e capisci dove vanno i tuoi soldi. Tutto sul tuo iPhone. Tutto sotto controllo.</span>
+      <span data-lang="en">Plan your expenses, track your accounts and understand where your money goes. All on your iPhone. All under control.</span>
+    </p>
 
-      <div class="float-card f3">
-        <div class="ic" style="background:#FBF0E8">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#E07800" stroke-width="2" style="width:16px;height:16px"><path d="M12 2v6M12 22v-2M4.93 4.93l4.24 4.24M19.07 19.07l-4.24-4.24M2 12h6M22 12h-2"/></svg>
-        </div>
-        <div>
-          <div class="lbl" data-lang="it" style="display:block">Spese ricorrenti</div>
-          <div class="lbl" data-lang="en">Recurring</div>
-          <div class="val">12</div>
-        </div>
-      </div>
+    <div class="hero-actions">
+      <a class="btn-light" href="#download">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+        <span data-lang="it" class="active-lang">Scarica per iPhone</span>
+        <span data-lang="en">Download for iPhone</span>
+      </a>
+      <a class="btn-outline-dark" href="#funzioni">
+        <span data-lang="it" class="active-lang">Scopri di più</span>
+        <span data-lang="en">Learn more</span>
+        <span aria-hidden="true">›</span>
+      </a>
+    </div>
 
-      <!-- iPhone mockup with screenshot placeholder -->
-      <div class="phone">
+    <div class="hero-device-wrap">
+      <div class="phone reveal" aria-hidden="true">
         <div class="phone-notch"></div>
         <div class="phone-screen">
           <!-- ⬇️ SOSTITUISCI: <img class="phone-screenshot" src="assets/mockups/dashboard.png" alt="Taska Dashboard" /> -->
           <div class="phone-placeholder">
-            <strong style="font-size:14px;color:#0A1240;font-family:'Fraunces',serif;font-weight:500;letter-spacing:-0.01em;margin-bottom:8px">SCREENSHOT</strong>
+            <div class="ph-icon">T</div>
+            <strong style="color:#f5f5f7;font-weight:600;font-family:var(--font);font-size:13px;letter-spacing:-.01em;margin-bottom:4px">SCREENSHOT</strong>
             assets/mockups/<br/>dashboard.png
           </div>
         </div>
       </div>
     </div>
+
+    <div class="hero-credits reveal">
+      <div>
+        <b>iOS 17+</b>
+        <span data-lang="it" class="active-lang">iPhone, nativa</span>
+        <span data-lang="en">iPhone, native</span>
+      </div>
+      <div>
+        <b>SwiftData</b>
+        <span data-lang="it" class="active-lang">Dati on-device</span>
+        <span data-lang="en">On-device data</span>
+      </div>
+      <div>
+        <b>14<span style="opacity:.55">gg</span></b>
+        <span data-lang="it" class="active-lang">Prova gratuita</span>
+        <span data-lang="en">Free trial</span>
+      </div>
+      <div>
+        <b>IT · EN</b>
+        <span data-lang="it" class="active-lang">Italiano &amp; English</span>
+        <span data-lang="en">Italian &amp; English</span>
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- ===================== STRIP ===================== -->
-<div class="strip">
-  <div class="strip-track">
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
     <span data-lang="it" class="active-lang">Pianifica</span>
     <span data-lang="it" class="active-lang">Traccia</span>
     <span data-lang="it" class="active-lang">Analizza</span>
@@ -152,7 +128,6 @@
     <span data-lang="it" class="active-lang">Traccia</span>
     <span data-lang="it" class="active-lang">Analizza</span>
     <span data-lang="it" class="active-lang">Risparmia</span>
-
     <span data-lang="en">Plan</span>
     <span data-lang="en">Track</span>
     <span data-lang="en">Analyze</span>
@@ -164,434 +139,591 @@
   </div>
 </div>
 
-<!-- ===================== FEATURES ===================== -->
-<section class="section wrap" id="features">
-  <div class="sec-head reveal">
-    <div>
-      <div class="eyebrow"><span class="dot"></span>
-        <span data-lang="it" class="active-lang">Cosa puoi fare</span>
-        <span data-lang="en">What you can do</span>
+<!-- ============ FEATURE 1: PIANIFICA ============ -->
+<section class="feature" id="funzioni">
+  <div class="feature-grid reveal">
+    <div class="feature-text">
+      <div class="eyebrow">
+        <span data-lang="it" class="active-lang">Pianifica</span>
+        <span data-lang="en">Plan</span>
+      </div>
+      <h2 class="display h-2">
+        <span data-lang="it" class="active-lang">Il mese, <span class="gradient-text">in chiaro.</span></span>
+        <span data-lang="en">The month, <span class="gradient-text">made clear.</span></span>
+      </h2>
+      <p>
+        <span data-lang="it" class="active-lang">Inserisci le spese previste a inizio mese e collega quelle effettive man mano che le sostieni. Sai sempre quanto ti resta, voce per voce, senza fogli di calcolo.</span>
+        <span data-lang="en">Set planned expenses at the start of the month and link the actual ones as they happen. You always know what's left, item by item — no spreadsheets.</span>
+      </p>
+      <a class="btn-ghost" href="#come">
+        <span data-lang="it" class="active-lang">Vedi come funziona</span>
+        <span data-lang="en">See how it works</span>
+      </a>
+    </div>
+    <div class="feature-visual">
+      <div class="demo-card">
+        <div class="demo-head">
+          <h4>
+            <span data-lang="it" class="active-lang">Maggio 2026</span>
+            <span data-lang="en">May 2026</span>
+          </h4>
+          <span class="pill">
+            <span data-lang="it" class="active-lang">62% usato</span>
+            <span data-lang="en">62% used</span>
+          </span>
+        </div>
+        <div class="budget-list">
+          <div class="budget-row">
+            <div class="row-top">
+              <span class="name">
+                <span data-lang="it" class="active-lang">Affitto</span>
+                <span data-lang="en">Rent</span>
+              </span>
+              <span class="val">€ 800 / 800</span>
+            </div>
+            <div class="budget-bar"><i class="good" style="width:100%"></i></div>
+          </div>
+          <div class="budget-row">
+            <div class="row-top">
+              <span class="name">
+                <span data-lang="it" class="active-lang">Spesa</span>
+                <span data-lang="en">Groceries</span>
+              </span>
+              <span class="val">€ 320 / 400</span>
+            </div>
+            <div class="budget-bar"><i style="width:80%"></i></div>
+          </div>
+          <div class="budget-row">
+            <div class="row-top">
+              <span class="name">
+                <span data-lang="it" class="active-lang">Tempo libero</span>
+                <span data-lang="en">Leisure</span>
+              </span>
+              <span class="val">€ 180 / 150</span>
+            </div>
+            <div class="budget-bar"><i class="warn" style="width:100%"></i></div>
+          </div>
+          <div class="budget-row">
+            <div class="row-top">
+              <span class="name">
+                <span data-lang="it" class="active-lang">Trasporti</span>
+                <span data-lang="en">Transport</span>
+              </span>
+              <span class="val">€ 60 / 120</span>
+            </div>
+            <div class="budget-bar"><i style="width:50%"></i></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div>
-      <h2 class="h-display h-2">
-        <span data-lang="it" class="active-lang">Strumenti chiari per <em>decisioni serene.</em></span>
-        <span data-lang="en">Clear tools for <em>peaceful decisions.</em></span>
+  </div>
+</section>
+
+<!-- ============ FEATURE 2: TRACCIA (DARK) ============ -->
+<section class="feature dark">
+  <div class="feature-grid reversed reveal">
+    <div class="feature-text">
+      <div class="eyebrow on-dark">
+        <span data-lang="it" class="active-lang">Analizza</span>
+        <span data-lang="en">Analyze</span>
+      </div>
+      <h2 class="display on-dark h-2">
+        <span data-lang="it" class="active-lang">Sei mesi. <span class="gradient-text">Un colpo d'occhio.</span></span>
+        <span data-lang="en">Six months. <span class="gradient-text">One glance.</span></span>
       </h2>
-      <p class="lead" style="margin-top:24px">
-        <span data-lang="it" class="active-lang">Tutto quello che ti serve per gestire un mese di spese, senza complicazioni e senza fogli di calcolo.</span>
-        <span data-lang="en">Everything you need to manage a month of expenses, without spreadsheets or headaches.</span>
+      <p>
+        <span data-lang="it" class="active-lang">Trend mese su mese, distribuzione per categoria, confronto Budget vs Reale. Grafici chiari per capire dove vanno i tuoi soldi e migliorare il prossimo mese.</span>
+        <span data-lang="en">Month-over-month trends, category breakdowns, Budget vs Actual. Clear charts to understand where your money goes and improve next month.</span>
       </p>
+      <div class="feature-stats">
+        <div class="feature-stat">
+          <b>6</b><span data-lang="it" class="active-lang">Mesi di trend</span><span data-lang="en">Months of trend</span>
+        </div>
+        <div class="feature-stat">
+          <b>12+</b><span data-lang="it" class="active-lang">Tipi di grafico</span><span data-lang="en">Chart types</span>
+        </div>
+        <div class="feature-stat">
+          <b>0</b><span data-lang="it" class="active-lang">Configurazione</span><span data-lang="en">Configuration</span>
+        </div>
+      </div>
     </div>
+    <div class="feature-visual">
+      <div class="demo-card dark">
+        <div class="demo-head">
+          <h4>
+            <span data-lang="it" class="active-lang">Trend semestrale</span>
+            <span data-lang="en">6-month trend</span>
+          </h4>
+          <span class="pill">€ 1.420</span>
+        </div>
+        <div class="chart-bars-wrap">
+          <div class="chart-bars">
+            <i style="height:40%" data-label="Dic"></i>
+            <i style="height:62%" data-label="Gen"></i>
+            <i style="height:48%" data-label="Feb"></i>
+            <i style="height:78%" data-label="Mar"></i>
+            <i style="height:55%" data-label="Apr"></i>
+            <i class="accent" style="height:92%" data-label="Mag"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE 3: PRIVACY ============ -->
+<section class="feature mute">
+  <div class="feature-grid reveal">
+    <div class="feature-text">
+      <div class="eyebrow">
+        <span data-lang="it" class="active-lang">Privacy</span>
+        <span data-lang="en">Privacy</span>
+      </div>
+      <h2 class="display h-2">
+        <span data-lang="it" class="active-lang">I tuoi soldi. <span class="gradient-text">Solo i tuoi.</span></span>
+        <span data-lang="en">Your money. <span class="gradient-text">Only yours.</span></span>
+      </h2>
+      <p>
+        <span data-lang="it" class="active-lang">Niente server, niente analitiche, nessun tracciamento. Tutti i dati restano sul tuo iPhone. Il backup, se vuoi, va solo nel tuo iCloud personale.</span>
+        <span data-lang="en">No servers, no analytics, no tracking. All data stays on your iPhone. Backups, if you want them, go only to your personal iCloud.</span>
+      </p>
+      <a class="btn-ghost" href="privacy.html">
+        <span data-lang="it" class="active-lang">Leggi la privacy policy</span>
+        <span data-lang="en">Read the privacy policy</span>
+      </a>
+    </div>
+    <div class="feature-visual">
+      <div class="privacy-card">
+        <div class="privacy-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <h4>
+          <span data-lang="it" class="active-lang">On-device</span>
+          <span data-lang="en">On-device</span>
+        </h4>
+        <p class="p">
+          <span data-lang="it" class="active-lang">SwiftData. Locale. Privato.</span>
+          <span data-lang="en">SwiftData. Local. Private.</span>
+        </p>
+        <div class="privacy-badges">
+          <span class="pb">Face ID</span>
+          <span class="pb">Touch ID</span>
+          <span class="pb">PIN</span>
+          <span class="pb">GDPR</span>
+          <span class="pb">CCPA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVERYTHING / BENTO ============ -->
+<section class="everything">
+  <div class="everything-head reveal">
+    <div class="eyebrow">
+      <span data-lang="it" class="active-lang">Tutto, in un'app</span>
+      <span data-lang="en">Everything, in one app</span>
+    </div>
+    <h2 class="display h-2">
+      <span data-lang="it" class="active-lang">Strumenti chiari. <span class="gradient-text">Decisioni serene.</span></span>
+      <span data-lang="en">Clear tools. <span class="gradient-text">Peaceful decisions.</span></span>
+    </h2>
+    <p>
+      <span data-lang="it" class="active-lang">Tutto quello che ti serve per gestire un mese di spese, senza complicazioni.</span>
+      <span data-lang="en">Everything you need to run a month of expenses, with zero friction.</span>
+    </p>
   </div>
 
   <div class="bento">
-
-    <!-- Big tile: Plan & Track -->
-    <article class="tile span-3 tall reveal">
-      <div class="num">01 / 09</div>
-      <h3>
-        <span data-lang="it" class="active-lang">Pianifica e traccia</span>
-        <span data-lang="en">Plan & Track</span>
-      </h3>
-      <p>
-        <span data-lang="it" class="active-lang">Inserisci le spese previste a inizio mese, poi collega quelle effettive man mano che le sostieni. Sai sempre quanto ti resta, voce per voce.</span>
-        <span data-lang="en">Set planned expenses at the start of the month, then link the actual ones as they happen. You always know what's left, item by item.</span>
-      </p>
-      <div class="visual">
-        <div class="viz-budget">
-          <div>
-            <div class="viz-row"><span data-lang="it" class="active-lang">Affitto</span><span data-lang="en">Rent</span><span>€ 800 / 800</span></div>
-            <div class="viz-bar"><span style="width:100%;background:linear-gradient(90deg,#2EA86A,#34C759)"></span></div>
-          </div>
-          <div>
-            <div class="viz-row"><span data-lang="it" class="active-lang">Spesa</span><span data-lang="en">Groceries</span><span>€ 320 / 400</span></div>
-            <div class="viz-bar"><span style="width:80%"></span></div>
-          </div>
-          <div>
-            <div class="viz-row"><span data-lang="it" class="active-lang">Tempo libero</span><span data-lang="en">Leisure</span><span>€ 180 / 150</span></div>
-            <div class="viz-bar"><span style="width:100%;background:linear-gradient(90deg,#D9483C,#FF3B30)"></span></div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Charts -->
+    <!-- Ricorrenti -->
     <article class="tile span-3 reveal">
-      <div class="num">02 / 09</div>
       <h3>
-        <span data-lang="it" class="active-lang">Grafici e report</span>
-        <span data-lang="en">Charts & reports</span>
-      </h3>
-      <p>
-        <span data-lang="it" class="active-lang">Trend su 6 mesi, distribuzione per categoria, confronto Budget vs Reale. Capisci dove vanno i tuoi soldi.</span>
-        <span data-lang="en">6-month trends, category breakdowns, Budget vs Actual. Understand where your money goes.</span>
-      </p>
-      <div class="visual">
-        <div class="viz-chart">
-          <i style="height:40%"></i>
-          <i style="height:65%"></i>
-          <i style="height:50%"></i>
-          <i style="height:80%"></i>
-          <i style="height:55%"></i>
-          <i style="height:90%"></i>
-        </div>
-      </div>
-    </article>
-
-    <!-- Recurring -->
-    <article class="tile span-2 reveal">
-      <div class="num">03 / 09</div>
-      <h3>
-        <span data-lang="it" class="active-lang">Spese ricorrenti</span>
-        <span data-lang="en">Recurring</span>
+        <span data-lang="it" class="active-lang">Spese ricorrenti, sempre pronte.</span>
+        <span data-lang="en">Recurring expenses, always set.</span>
       </h3>
       <p>
         <span data-lang="it" class="active-lang">Affitto, abbonamenti, bollette: imposta una volta, ogni mese sono già lì.</span>
-        <span data-lang="en">Rent, subscriptions, bills: set them once, they're back every month.</span>
+        <span data-lang="en">Rent, subscriptions, bills: set once, ready every month.</span>
       </p>
-      <div class="visual viz-pill-row">
-        <span class="viz-pill blue">Netflix · 12.99</span>
-        <span class="viz-pill blue">Gym · 39.00</span>
-        <span class="viz-pill blue" data-lang="it" style="display:inline-flex">Affitto · 800</span>
-        <span class="viz-pill blue" data-lang="en">Rent · 800</span>
+      <div class="visual pill-row">
+        <span class="pill">Netflix · 12,99</span>
+        <span class="pill">Gym · 39,00</span>
+        <span class="pill brand">
+          <span data-lang="it" class="active-lang">Affitto · 800</span>
+          <span data-lang="en">Rent · 800</span>
+        </span>
+        <span class="pill">Spotify · 9,99</span>
+        <span class="pill">iCloud · 2,99</span>
       </div>
     </article>
 
-    <!-- Categories -->
-    <article class="tile span-2 reveal">
-      <div class="num">04 / 09</div>
-      <h3>
-        <span data-lang="it" class="active-lang">Categorie</span>
-        <span data-lang="en">Categories</span>
-      </h3>
-      <p>
-        <span data-lang="it" class="active-lang">Predefinite o personalizzate, con icone e colori. Organizza tutto a modo tuo.</span>
-        <span data-lang="en">Default or custom, with icons and colors. Organize everything your way.</span>
-      </p>
-      <div class="visual">
-        <div class="viz-icons">
-          <div class="ic" style="background:#1FA4FF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
-          <div class="ic" style="background:#7C6AF5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8v8M12 6v12M8 10v4"/></svg></div>
-          <div class="ic" style="background:#2EA86A"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 17l10 5 10-5M2 12l10 5 10-5M12 2L2 7l10 5 10-5z"/></svg></div>
-          <div class="ic" style="background:#FF9500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Accounts -->
-    <article class="tile span-2 reveal">
-      <div class="num">05 / 09</div>
-      <h3>
-        <span data-lang="it" class="active-lang">Conti & banche</span>
-        <span data-lang="en">Accounts & banks</span>
-      </h3>
-      <p>
-        <span data-lang="it" class="active-lang">Conti correnti, carte e contanti. Taska riconosce la tua banca e mostra il logo.</span>
-        <span data-lang="en">Bank accounts, cards and cash. Taska recognizes your bank and shows the logo.</span>
-      </p>
-      <div class="visual">
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <span class="viz-pill" style="background:var(--ink);color:var(--cream);border-color:var(--ink)">Intesa</span>
-          <span class="viz-pill" style="background:var(--ink);color:var(--cream);border-color:var(--ink)">Revolut</span>
-          <span class="viz-pill" style="background:var(--ink);color:var(--cream);border-color:var(--ink)">N26</span>
-          <span class="viz-pill" style="background:var(--ink);color:var(--cream);border-color:var(--ink)">PostePay</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- Privacy -->
+    <!-- Categorie -->
     <article class="tile span-3 reveal">
-      <div class="num">06 / 09</div>
       <h3>
-        <span data-lang="it" class="active-lang">I tuoi dati restano tuoi</span>
-        <span data-lang="en">Your data stays yours</span>
+        <span data-lang="it" class="active-lang">Categorie come le vuoi tu.</span>
+        <span data-lang="en">Categories your way.</span>
       </h3>
       <p>
-        <span data-lang="it" class="active-lang">Niente server, niente analitiche, nessun tracciamento. Tutto è salvato sul tuo iPhone. Backup opzionale solo nel tuo iCloud personale.</span>
-        <span data-lang="en">No servers, no analytics, no tracking. Everything is stored on your iPhone. Optional backup only to your personal iCloud.</span>
+        <span data-lang="it" class="active-lang">Predefinite o personalizzate, con icone e colori. Organizza ogni voce a modo tuo.</span>
+        <span data-lang="en">Default or custom, with icons and colors. Organize every line your way.</span>
       </p>
-      <div class="visual">
-        <div class="viz-lock">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        </div>
+      <div class="visual icon-row">
+        <div class="ic" style="background:#5B8DEF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+        <div class="ic" style="background:#7C6AF5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8v8M12 6v12M8 10v4"/></svg></div>
+        <div class="ic" style="background:#30D158"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 17l10 5 10-5M2 12l10 5 10-5M12 2L2 7l10 5 10-5z"/></svg></div>
+        <div class="ic" style="background:#FF9F0A"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div class="ic" style="background:#FF453A"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      </div>
+    </article>
+
+    <!-- Conti & banche -->
+    <article class="tile span-2 reveal">
+      <h3>
+        <span data-lang="it" class="active-lang">Conti &amp; banche.</span>
+        <span data-lang="en">Accounts &amp; banks.</span>
+      </h3>
+      <p>
+        <span data-lang="it" class="active-lang">Conto, carte, contanti. Taska riconosce la tua banca.</span>
+        <span data-lang="en">Bank, cards, cash. Taska recognizes your bank.</span>
+      </p>
+      <div class="visual pill-row">
+        <span class="pill solid">Intesa</span>
+        <span class="pill solid">Revolut</span>
+        <span class="pill solid">N26</span>
+        <span class="pill solid">PostePay</span>
       </div>
     </article>
 
     <!-- Widget -->
-    <article class="tile span-3 reveal">
-      <div class="num">07 / 09</div>
+    <article class="tile span-2 dark reveal">
       <h3>
-        <span data-lang="it" class="active-lang">Widget &amp; Spesa rapida</span>
-        <span data-lang="en">Widgets &amp; Quick add</span>
+        <span data-lang="it" class="active-lang">Widget &amp; Spesa rapida.</span>
+        <span data-lang="en">Widgets &amp; Quick add.</span>
       </h3>
       <p>
-        <span data-lang="it" class="active-lang">Aggiungi spese dalla Lock Screen, dal Centro di Controllo o tenendo premuto sull'icona dell'app. Un secondo e via.</span>
-        <span data-lang="en">Add expenses from the Lock Screen, Control Center or by long-pressing the app icon. One second, done.</span>
+        <span data-lang="it" class="active-lang">Dalla Lock Screen, dal Centro di Controllo, o tenendo premuto sull'icona.</span>
+        <span data-lang="en">From Lock Screen, Control Center, or by long-pressing the icon.</span>
       </p>
-      <div class="visual" style="display:flex;gap:8px">
-        <div style="flex:1;background:var(--cream);border:1px solid var(--rule-soft);border-radius:14px;padding:14px;min-height:90px;display:flex;flex-direction:column;justify-content:space-between">
-          <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.08em;color:var(--ink-mute);text-transform:uppercase">Lock Screen</div>
-          <div style="font-family:var(--display);font-size:22px;font-weight:500">€ 1.420</div>
-          <div style="height:4px;background:var(--rule-soft);border-radius:100px;overflow:hidden"><span style="display:block;height:100%;width:62%;background:linear-gradient(90deg,#1A237E,#1FA4FF)"></span></div>
+      <div class="visual widget-pair">
+        <div class="mini-widget light">
+          <div class="top">Lock Screen</div>
+          <div>
+            <div class="val">€1.420</div>
+            <div class="budget-bar" style="margin-top:8px"><i style="width:62%"></i></div>
+          </div>
         </div>
-        <div style="flex:1;background:var(--ink);color:var(--cream);border-radius:14px;padding:14px;min-height:90px;display:flex;flex-direction:column;justify-content:space-between">
-          <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.08em;color:rgba(246,243,236,0.6);text-transform:uppercase">Home</div>
-          <div style="font-family:var(--display);font-size:22px;font-weight:500;color:#1FA4FF">+ €240</div>
-          <div style="font-family:var(--mono);font-size:10px;color:rgba(246,243,236,0.6)" data-lang="it">risparmiato</div>
-          <div style="font-family:var(--mono);font-size:10px;color:rgba(246,243,236,0.6)" data-lang="en">saved</div>
+        <div class="mini-widget brand">
+          <div class="top">Home</div>
+          <div>
+            <div class="val">+ €240</div>
+            <div style="font-size:11px;opacity:.75;margin-top:4px">
+              <span data-lang="it" class="active-lang">risparmiato</span>
+              <span data-lang="en">saved</span>
+            </div>
+          </div>
         </div>
       </div>
     </article>
 
-    <!-- Receipts -->
+    <!-- Ricevute -->
     <article class="tile span-2 reveal">
-      <div class="num">08 / 09</div>
       <h3>
-        <span data-lang="it" class="active-lang">Allega ricevute</span>
-        <span data-lang="en">Attach receipts</span>
+        <span data-lang="it" class="active-lang">Allega le ricevute.</span>
+        <span data-lang="en">Attach receipts.</span>
       </h3>
       <p>
-        <span data-lang="it" class="active-lang">Fotografa lo scontrino e resta legato alla spesa. Hai sempre la prova.</span>
-        <span data-lang="en">Snap the receipt and keep it linked to the expense. Proof, always at hand.</span>
+        <span data-lang="it" class="active-lang">Fotografa lo scontrino, resta legato alla spesa.</span>
+        <span data-lang="en">Snap the receipt, keep it linked to the expense.</span>
       </p>
       <div class="visual">
-        <div style="background:var(--cream);border:1px dashed var(--ink-mute);border-radius:12px;padding:16px;font-family:var(--mono);font-size:11px;color:var(--ink-mute);text-align:center;letter-spacing:0.04em">
-          <div style="font-family:var(--display);font-size:18px;color:var(--ink);margin-bottom:4px">SUPERMERCATO</div>
-          <div>04 / 05 / 2026</div>
-          <div style="margin-top:8px;font-family:var(--display);font-size:16px;color:var(--ink)">€ 47.20</div>
+        <div class="receipt">
+          <div class="merchant">SUPERMERCATO</div>
+          <div class="total">€ 47,20</div>
+          <div class="date">04 / 05 / 2026</div>
         </div>
       </div>
     </article>
 
     <!-- Backup -->
-    <article class="tile span-2 reveal">
-      <div class="num">09 / 09</div>
+    <article class="tile span-3 reveal">
       <h3>
-        <span data-lang="it" class="active-lang">Backup automatico</span>
-        <span data-lang="en">Auto backup</span>
+        <span data-lang="it" class="active-lang">Backup. Esporta. Migra.</span>
+        <span data-lang="en">Backup. Export. Migrate.</span>
       </h3>
       <p>
-        <span data-lang="it" class="active-lang">Salva una copia su iCloud personale o esporta in JSON / CSV.</span>
-        <span data-lang="en">Save to your personal iCloud, or export as JSON / CSV.</span>
+        <span data-lang="it" class="active-lang">Una copia sul tuo iCloud personale, oppure esporta in JSON o CSV in qualsiasi momento.</span>
+        <span data-lang="en">A copy on your personal iCloud, or export to JSON or CSV anytime.</span>
       </p>
-      <div class="visual viz-pill-row">
-        <span class="viz-pill green">iCloud</span>
-        <span class="viz-pill blue">JSON</span>
-        <span class="viz-pill blue">CSV</span>
+      <div class="visual pill-row">
+        <span class="pill brand">iCloud</span>
+        <span class="pill">JSON</span>
+        <span class="pill">CSV</span>
+        <span class="pill">
+          <span data-lang="it" class="active-lang">Automatico</span>
+          <span data-lang="en">Automatic</span>
+        </span>
       </div>
     </article>
 
-    <!-- Notifications -->
-    <article class="tile span-2 reveal">
-      <div class="num">+ <span data-lang="it" class="active-lang">extra</span><span data-lang="en">extra</span></div>
+    <!-- Notifiche -->
+    <article class="tile span-3 dark reveal">
       <h3>
-        <span data-lang="it" class="active-lang">Notifiche intelligenti</span>
-        <span data-lang="en">Smart notifications</span>
+        <span data-lang="it" class="active-lang">Notifiche intelligenti.</span>
+        <span data-lang="en">Smart notifications.</span>
       </h3>
       <p>
         <span data-lang="it" class="active-lang">Avvisi quando ti avvicini al limite di un budget e report mensili per non perdere il filo.</span>
-        <span data-lang="en">Get alerts when you near a budget limit, plus monthly reports to keep track.</span>
+        <span data-lang="en">Alerts when you near a budget limit, plus monthly reports to keep on track.</span>
       </p>
+      <div class="visual pill-row">
+        <span class="pill">
+          <span data-lang="it" class="active-lang">⚠ 80% budget</span>
+          <span data-lang="en">⚠ 80% budget</span>
+        </span>
+        <span class="pill brand">
+          <span data-lang="it" class="active-lang">📊 Report mensile</span>
+          <span data-lang="en">📊 Monthly report</span>
+        </span>
+      </div>
     </article>
-
   </div>
 </section>
 
-<!-- ===================== HOW IT WORKS ===================== -->
-<section class="section wrap" id="how">
-  <div class="sec-head reveal">
-    <div>
-      <div class="eyebrow"><span class="dot"></span>
-        <span data-lang="it" class="active-lang">Come funziona</span>
-        <span data-lang="en">How it works</span>
-      </div>
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how" id="come">
+  <div class="how-head reveal">
+    <div class="eyebrow on-dark">
+      <span data-lang="it" class="active-lang">Come funziona</span>
+      <span data-lang="en">How it works</span>
     </div>
-    <div>
-      <h2 class="h-display h-2">
-        <span data-lang="it" class="active-lang">Tre passi. <em>Niente fogli di calcolo.</em></span>
-        <span data-lang="en">Three steps. <em>No spreadsheets.</em></span>
-      </h2>
-    </div>
+    <h2 class="display on-dark h-2">
+      <span data-lang="it" class="active-lang">Tre passi. <span class="gradient-text">Niente fogli di calcolo.</span></span>
+      <span data-lang="en">Three steps. <span class="gradient-text">No spreadsheets.</span></span>
+    </h2>
+    <p>
+      <span data-lang="it" class="active-lang">In meno di 5 minuti hai il tuo primo budget.</span>
+      <span data-lang="en">In under 5 minutes you've got your first budget.</span>
+    </p>
   </div>
-
-  <div class="steps reveal">
-    <div class="step">
-      <div class="badge">1</div>
-      <h4 data-lang="it" class="active-lang">Pianifica il mese</h4>
-      <h4 data-lang="en">Plan the month</h4>
-      <p data-lang="it" class="active-lang">Inserisci le spese previste e fissa un budget per categoria.</p>
-      <p data-lang="en">Add planned expenses and set a budget per category.</p>
-    </div>
-    <div class="step">
-      <div class="badge">2</div>
-      <h4 data-lang="it" class="active-lang">Registra durante il mese</h4>
-      <h4 data-lang="en">Track during the month</h4>
-      <p data-lang="it" class="active-lang">Aggiungi le spese effettive in un secondo, anche dal widget.</p>
-      <p data-lang="en">Log actual expenses in a second, even from the widget.</p>
-    </div>
-    <div class="step">
-      <div class="badge">3</div>
-      <h4 data-lang="it" class="active-lang">Capisci e migliora</h4>
-      <h4 data-lang="en">Understand & improve</h4>
-      <p data-lang="it" class="active-lang">Grafici e report ti mostrano dove sei andato bene e cosa correggere.</p>
-      <p data-lang="en">Charts and reports show what worked and what to adjust.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== PRICING ===================== -->
-<section class="section wrap" id="pricing">
-  <div class="pricing reveal">
-    <div class="pricing-head">
-      <div class="eyebrow"><span class="dot"></span>
-        <span data-lang="it" class="active-lang">Abbonamento</span>
-        <span data-lang="en">Subscription</span>
-      </div>
-      <h2 class="h-display h-2">
-        <span data-lang="it" class="active-lang"><em>14 giorni gratis.</em><br/>Poi scegli tu.</span>
-        <span data-lang="en"><em>14 days free.</em><br/>Then you choose.</span>
-      </h2>
+  <div class="steps">
+    <div class="step reveal">
+      <div class="num">01</div>
+      <h4>
+        <span data-lang="it" class="active-lang">Pianifica il mese</span>
+        <span data-lang="en">Plan the month</span>
+      </h4>
       <p>
-        <span data-lang="it" class="active-lang">Tutte le funzioni sbloccate per due settimane, senza inserire metodo di pagamento. Dopo, scegli il piano che ti torna comodo.</span>
-        <span data-lang="en">All features unlocked for two weeks, no payment method required. Then pick the plan that fits.</span>
+        <span data-lang="it" class="active-lang">Inserisci le spese previste e fissa un budget per categoria.</span>
+        <span data-lang="en">Add planned expenses and set a budget per category.</span>
       </p>
     </div>
-
-    <div class="plans">
-      <div class="plan">
-        <div class="plan-name" data-lang="it" style="display:block">Mensile</div>
-        <div class="plan-name" data-lang="en">Monthly</div>
-        <div class="plan-price"><span class="cur">€</span>0,99</div>
-        <div class="plan-period" data-lang="it" style="display:block">al mese</div>
-        <div class="plan-period" data-lang="en">per month</div>
-        <div class="plan-equiv" data-lang="it" style="display:block">Massima flessibilità</div>
-        <div class="plan-equiv" data-lang="en">Most flexible</div>
-      </div>
-
-      <div class="plan">
-        <div class="plan-name" data-lang="it" style="display:block">Trimestrale</div>
-        <div class="plan-name" data-lang="en">Quarterly</div>
-        <div class="plan-price"><span class="cur">€</span>2,49</div>
-        <div class="plan-period" data-lang="it" style="display:block">ogni 3 mesi</div>
-        <div class="plan-period" data-lang="en">every 3 months</div>
-        <div class="plan-equiv">≈ € 0,83 / mese</div>
-      </div>
-
-      <div class="plan">
-        <div class="plan-name" data-lang="it" style="display:block">Semestrale</div>
-        <div class="plan-name" data-lang="en">Half-yearly</div>
-        <div class="plan-price"><span class="cur">€</span>3,99</div>
-        <div class="plan-period" data-lang="it" style="display:block">ogni 6 mesi</div>
-        <div class="plan-period" data-lang="en">every 6 months</div>
-        <div class="plan-equiv">≈ € 0,67 / mese</div>
-      </div>
-
-      <div class="plan featured">
-        <div class="plan-tag" data-lang="it" style="display:block">Più conveniente</div>
-        <div class="plan-tag" data-lang="en">Best value</div>
-        <div class="plan-name" data-lang="it" style="display:block">Annuale</div>
-        <div class="plan-name" data-lang="en">Yearly</div>
-        <div class="plan-price"><span class="cur">€</span>6,99</div>
-        <div class="plan-period" data-lang="it" style="display:block">all'anno</div>
-        <div class="plan-period" data-lang="en">per year</div>
-        <div class="plan-equiv">≈ € 0,58 / mese</div>
-      </div>
+    <div class="step reveal">
+      <div class="num">02</div>
+      <h4>
+        <span data-lang="it" class="active-lang">Registra in un tocco</span>
+        <span data-lang="en">Log in one tap</span>
+      </h4>
+      <p>
+        <span data-lang="it" class="active-lang">Aggiungi le spese effettive in un secondo, anche dal widget.</span>
+        <span data-lang="en">Log actual expenses in one tap — widgets too.</span>
+      </p>
     </div>
-
-    <div class="pricing-cta">
-      <a class="btn-primary" href="#download" id="download">
-        <span data-lang="it" class="active-lang">Inizia la prova di 14 giorni</span>
-        <span data-lang="en">Start your 14-day trial</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-      <span class="small" data-lang="it" style="display:block">L'abbonamento si rinnova automaticamente, salvo disdetta. Disdici quando vuoi dalle Impostazioni Apple ID.</span>
-      <span class="small" data-lang="en">Auto-renews unless cancelled. Cancel anytime from your Apple ID settings.</span>
+    <div class="step reveal">
+      <div class="num">03</div>
+      <h4>
+        <span data-lang="it" class="active-lang">Capisci, migliora</span>
+        <span data-lang="en">Understand, improve</span>
+      </h4>
+      <p>
+        <span data-lang="it" class="active-lang">Grafici e report mostrano dove sei andato bene e cosa correggere.</span>
+        <span data-lang="en">Charts and reports show what worked and what to adjust.</span>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ===================== TRUST ===================== -->
-<section class="section wrap">
-  <div class="trust reveal">
-    <div>
-      <div class="eyebrow"><span class="dot"></span>
-        <span data-lang="it" class="active-lang">Privacy by design</span>
-        <span data-lang="en">Privacy by design</span>
+<!-- ============ PRICING ============ -->
+<section class="pricing" id="prezzi">
+  <div class="pricing-head reveal">
+    <div class="eyebrow">
+      <span data-lang="it" class="active-lang">Abbonamento</span>
+      <span data-lang="en">Subscription</span>
+    </div>
+    <h2 class="display h-2">
+      <span data-lang="it" class="active-lang"><span class="gradient-text">14 giorni gratis.</span><br/>Poi scegli tu.</span>
+      <span data-lang="en"><span class="gradient-text">14 days free.</span><br/>Then you choose.</span>
+    </h2>
+    <p>
+      <span data-lang="it" class="active-lang">Tutte le funzioni sbloccate per due settimane, senza inserire metodo di pagamento.</span>
+      <span data-lang="en">All features unlocked for two weeks, no payment method required.</span>
+    </p>
+  </div>
+
+  <div class="plans reveal">
+    <div class="plan">
+      <div class="plan-name">
+        <span data-lang="it" class="active-lang">Mensile</span>
+        <span data-lang="en">Monthly</span>
       </div>
-      <h2 class="h-display h-2" style="margin-top:16px">
-        <span data-lang="it" class="active-lang">I tuoi soldi <em>li vedi solo tu.</em></span>
-        <span data-lang="en">Your money, <em>only you see it.</em></span>
-      </h2>
-      <p style="margin-top:24px;color:var(--ink-soft);max-width:440px;font-size:16px;line-height:1.6">
-        <span data-lang="it" class="active-lang">Taska è costruita sul principio che i dati finanziari restino dove devono restare: sul tuo iPhone. Niente compromessi.</span>
-        <span data-lang="en">Taska is built on a simple principle: financial data should stay where it belongs — on your iPhone. No compromises.</span>
+      <div class="plan-price"><span class="cur">€</span>0,99</div>
+      <div class="plan-period">
+        <span data-lang="it" class="active-lang">al mese</span>
+        <span data-lang="en">per month</span>
+      </div>
+      <div class="plan-equiv">
+        <span data-lang="it" class="active-lang">Massima flessibilità</span>
+        <span data-lang="en">Most flexible</span>
+      </div>
+    </div>
+    <div class="plan">
+      <div class="plan-name">
+        <span data-lang="it" class="active-lang">Trimestrale</span>
+        <span data-lang="en">Quarterly</span>
+      </div>
+      <div class="plan-price"><span class="cur">€</span>2,49</div>
+      <div class="plan-period">
+        <span data-lang="it" class="active-lang">ogni 3 mesi</span>
+        <span data-lang="en">every 3 months</span>
+      </div>
+      <div class="plan-equiv">≈ € 0,83 / mese</div>
+    </div>
+    <div class="plan">
+      <div class="plan-name">
+        <span data-lang="it" class="active-lang">Semestrale</span>
+        <span data-lang="en">Half-yearly</span>
+      </div>
+      <div class="plan-price"><span class="cur">€</span>3,99</div>
+      <div class="plan-period">
+        <span data-lang="it" class="active-lang">ogni 6 mesi</span>
+        <span data-lang="en">every 6 months</span>
+      </div>
+      <div class="plan-equiv">≈ € 0,67 / mese</div>
+    </div>
+    <div class="plan featured">
+      <div class="plan-tag">
+        <span data-lang="it" class="active-lang">Più conveniente</span>
+        <span data-lang="en">Best value</span>
+      </div>
+      <div class="plan-name">
+        <span data-lang="it" class="active-lang">Annuale</span>
+        <span data-lang="en">Yearly</span>
+      </div>
+      <div class="plan-price"><span class="cur">€</span>6,99</div>
+      <div class="plan-period">
+        <span data-lang="it" class="active-lang">all'anno</span>
+        <span data-lang="en">per year</span>
+      </div>
+      <div class="plan-equiv">≈ € 0,58 / mese</div>
+    </div>
+  </div>
+
+  <div class="pricing-cta reveal">
+    <a class="btn-primary" href="#download" id="download">
+      <span data-lang="it" class="active-lang">Inizia i 14 giorni gratuiti</span>
+      <span data-lang="en">Start your 14-day trial</span>
+    </a>
+    <span class="small">
+      <span data-lang="it" class="active-lang">L'abbonamento si rinnova automaticamente, salvo disdetta. Disdici quando vuoi dalle Impostazioni Apple ID.</span>
+      <span data-lang="en">Auto-renews unless cancelled. Cancel anytime from your Apple ID settings.</span>
+    </span>
+  </div>
+</section>
+
+<!-- ============ TRUST ============ -->
+<section class="trust">
+  <div class="trust-head reveal">
+    <div class="eyebrow">
+      <span data-lang="it" class="active-lang">Privacy by design</span>
+      <span data-lang="en">Privacy by design</span>
+    </div>
+    <h2 class="display h-3">
+      <span data-lang="it" class="active-lang">Costruita per restare <span class="gradient-text">sul tuo iPhone.</span></span>
+      <span data-lang="en">Built to stay <span class="gradient-text">on your iPhone.</span></span>
+    </h2>
+    <p>
+      <span data-lang="it" class="active-lang">Taska parte da un principio: i dati finanziari restano dove devono restare.</span>
+      <span data-lang="en">Taska starts from a principle: your financial data stays where it belongs.</span>
+    </p>
+  </div>
+  <div class="trust-grid reveal">
+    <div class="trust-item">
+      <div class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <h5>
+        <span data-lang="it" class="active-lang">Zero server</span>
+        <span data-lang="en">Zero servers</span>
+      </h5>
+      <p>
+        <span data-lang="it" class="active-lang">Lo sviluppatore non gestisce server. Nessuno riceve i tuoi dati.</span>
+        <span data-lang="en">The developer runs no servers. No one receives your data.</span>
       </p>
     </div>
-
-    <div class="trust-items">
-      <div class="trust-item">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <div>
-          <h5 data-lang="it" style="display:block">Zero server</h5>
-          <h5 data-lang="en">Zero servers</h5>
-          <p data-lang="it" style="display:block">Lo sviluppatore non gestisce server. Nessuno riceve i tuoi dati.</p>
-          <p data-lang="en">The developer runs no servers. No one receives your data.</p>
-        </div>
+    <div class="trust-item">
+      <div class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg>
       </div>
-      <div class="trust-item">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg></div>
-        <div>
-          <h5 data-lang="it" style="display:block">Zero tracking</h5>
-          <h5 data-lang="en">Zero tracking</h5>
-          <p data-lang="it" style="display:block">Niente analitiche, niente pubblicità, niente identificatori.</p>
-          <p data-lang="en">No analytics, no ads, no identifiers.</p>
-        </div>
+      <h5>
+        <span data-lang="it" class="active-lang">Zero tracking</span>
+        <span data-lang="en">Zero tracking</span>
+      </h5>
+      <p>
+        <span data-lang="it" class="active-lang">Niente analitiche, niente pubblicità, nessun identificatore.</span>
+        <span data-lang="en">No analytics, no ads, no identifiers.</span>
+      </p>
+    </div>
+    <div class="trust-item">
+      <div class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
       </div>
-      <div class="trust-item">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-        <div>
-          <h5 data-lang="it" style="display:block">Face ID, Touch ID, PIN</h5>
-          <h5 data-lang="en">Face ID, Touch ID, PIN</h5>
-          <p data-lang="it" style="display:block">Proteggi l'accesso all'app con biometria o un PIN dedicato.</p>
-          <p data-lang="en">Protect access with biometrics or a dedicated PIN.</p>
-        </div>
+      <h5>
+        <span data-lang="it" class="active-lang">Face ID · Touch ID · PIN</span>
+        <span data-lang="en">Face ID · Touch ID · PIN</span>
+      </h5>
+      <p>
+        <span data-lang="it" class="active-lang">Proteggi l'accesso con biometria o un PIN dedicato.</span>
+        <span data-lang="en">Protect access with biometrics or a dedicated PIN.</span>
+      </p>
+    </div>
+    <div class="trust-item">
+      <div class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
       </div>
-      <div class="trust-item">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
-        <div>
-          <h5 data-lang="it" style="display:block">Conforme GDPR &amp; CCPA</h5>
-          <h5 data-lang="en">GDPR &amp; CCPA compliant</h5>
-          <p data-lang="it" style="display:block">Progettata nel rispetto delle normative europee e americane.</p>
-          <p data-lang="en">Designed in line with European and American regulations.</p>
-        </div>
-      </div>
+      <h5>
+        <span data-lang="it" class="active-lang">GDPR &amp; CCPA</span>
+        <span data-lang="en">GDPR &amp; CCPA</span>
+      </h5>
+      <p>
+        <span data-lang="it" class="active-lang">Progettata nel rispetto delle normative europee e americane.</span>
+        <span data-lang="en">Designed in line with European and American regulations.</span>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ===================== FAQ ===================== -->
-<section class="section wrap">
-  <div class="sec-head reveal">
-    <div>
-      <div class="eyebrow"><span class="dot"></span>
-        <span data-lang="it" class="active-lang">Domande frequenti</span>
-        <span data-lang="en">FAQ</span>
-      </div>
+<!-- ============ FAQ ============ -->
+<section class="faq-section">
+  <div class="faq-head reveal">
+    <div class="eyebrow">
+      <span data-lang="it" class="active-lang">Domande frequenti</span>
+      <span data-lang="en">FAQ</span>
     </div>
-    <div>
-      <h2 class="h-display h-2">
-        <span data-lang="it" class="active-lang">Risposte <em>brevi e oneste.</em></span>
-        <span data-lang="en">Short, <em>honest answers.</em></span>
-      </h2>
-    </div>
+    <h2 class="display h-2">
+      <span data-lang="it" class="active-lang">Risposte <span class="gradient-text">brevi e oneste.</span></span>
+      <span data-lang="en">Short, <span class="gradient-text">honest answers.</span></span>
+    </h2>
   </div>
 
   <div class="faq reveal">
     <details>
       <summary>
-        <span data-lang="it" class="active-lang">La prova di 14 giorni richiede una carta di credito?</span>
-        <span data-lang="en">Does the 14-day trial require a credit card?</span>
+        <span>
+          <span data-lang="it" class="active-lang">La prova di 14 giorni richiede una carta di credito?</span>
+          <span data-lang="en">Does the 14-day trial require a credit card?</span>
+        </span>
         <span class="plus">+</span>
       </summary>
       <div class="faq-answer">
@@ -602,8 +734,10 @@
 
     <details>
       <summary>
-        <span data-lang="it" class="active-lang">I miei dati finanziari escono dal mio iPhone?</span>
-        <span data-lang="en">Does my financial data ever leave my iPhone?</span>
+        <span>
+          <span data-lang="it" class="active-lang">I miei dati finanziari escono dal mio iPhone?</span>
+          <span data-lang="en">Does my financial data ever leave my iPhone?</span>
+        </span>
         <span class="plus">+</span>
       </summary>
       <div class="faq-answer">
@@ -614,8 +748,10 @@
 
     <details>
       <summary>
-        <span data-lang="it" class="active-lang">Cosa succede se cambio iPhone?</span>
-        <span data-lang="en">What happens if I switch iPhone?</span>
+        <span>
+          <span data-lang="it" class="active-lang">Cosa succede se cambio iPhone?</span>
+          <span data-lang="en">What happens if I switch iPhone?</span>
+        </span>
         <span class="plus">+</span>
       </summary>
       <div class="faq-answer">
@@ -626,8 +762,10 @@
 
     <details>
       <summary>
-        <span data-lang="it" class="active-lang">Posso disdire l'abbonamento?</span>
-        <span data-lang="en">Can I cancel my subscription?</span>
+        <span>
+          <span data-lang="it" class="active-lang">Posso disdire l'abbonamento?</span>
+          <span data-lang="en">Can I cancel my subscription?</span>
+        </span>
         <span class="plus">+</span>
       </summary>
       <div class="faq-answer">
@@ -638,8 +776,10 @@
 
     <details>
       <summary>
-        <span data-lang="it" class="active-lang">Taska è disponibile su Android o Web?</span>
-        <span data-lang="en">Is Taska available on Android or Web?</span>
+        <span>
+          <span data-lang="it" class="active-lang">Taska è disponibile su Android o Web?</span>
+          <span data-lang="en">Is Taska available on Android or Web?</span>
+        </span>
         <span class="plus">+</span>
       </summary>
       <div class="faq-answer">
@@ -650,8 +790,10 @@
 
     <details>
       <summary>
-        <span data-lang="it" class="active-lang">Posso registrare spese in valute estere?</span>
-        <span data-lang="en">Can I record expenses in foreign currencies?</span>
+        <span>
+          <span data-lang="it" class="active-lang">Posso registrare spese in valute estere?</span>
+          <span data-lang="en">Can I record expenses in foreign currencies?</span>
+        </span>
         <span class="plus">+</span>
       </summary>
       <div class="faq-answer">
@@ -662,20 +804,24 @@
   </div>
 </section>
 
-<!-- ===================== FINAL CTA ===================== -->
-<section class="final-cta reveal">
-  <h2 class="h-display h-2">
-    <span data-lang="it" class="active-lang">Prendi il controllo,<br/><em>oggi.</em></span>
-    <span data-lang="en">Take control,<br/><em>today.</em></span>
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="eyebrow">
+    <span data-lang="it" class="active-lang">Inizia oggi</span>
+    <span data-lang="en">Start today</span>
+  </div>
+  <h2 class="display h-1 on-dark">
+    <span data-lang="it" class="active-lang">Prendi il controllo.<br/><span class="gradient-text">Oggi.</span></span>
+    <span data-lang="en">Take control.<br/><span class="gradient-text">Today.</span></span>
   </h2>
-  <p class="lead">
+  <p class="lead on-dark">
     <span data-lang="it" class="active-lang">14 giorni di accesso completo. Nessun addebito automatico. Nessuna sorpresa.</span>
     <span data-lang="en">14 days of full access. No automatic charges. No surprises.</span>
   </p>
-  <a class="btn-primary" href="https://apps.apple.com/app/taska" target="_blank" rel="noopener">
+  <a class="btn-light" href="https://apps.apple.com/app/taska" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-    <span data-lang="it" class="active-lang">Scarica Taska su App Store</span>
-    <span data-lang="en">Download Taska on the App Store</span>
+    <span data-lang="it" class="active-lang">Scarica Taska</span>
+    <span data-lang="en">Download Taska</span>
   </a>
   <span class="small">
     <span data-lang="it" class="active-lang">Solo per iPhone · iOS 17+ · Italiano &amp; English</span>
@@ -683,49 +829,72 @@
   </span>
 </section>
 
-<!-- ===================== FOOTER ===================== -->
+<!-- ============ FOOTER ============ -->
 <footer class="footer">
-  <div class="wrap">
+  <div class="wrap-wide">
+    <div class="footer-top">
+      <p>
+        <span data-lang="it" class="active-lang">Taska è progettata e sviluppata in Italia. Non raccoglie dati personali, non utilizza tracker e non condivide informazioni con terze parti.</span>
+        <span data-lang="en">Taska is designed and developed in Italy. It collects no personal data, uses no trackers, and shares no information with third parties.</span>
+      </p>
+      <p>
+        <span data-lang="it" class="active-lang">App Store è un marchio di Apple Inc. iPhone, iCloud, Face ID, Touch ID, SwiftUI e SwiftData sono marchi di Apple Inc.</span>
+        <span data-lang="en">App Store is a trademark of Apple Inc. iPhone, iCloud, Face ID, Touch ID, SwiftUI and SwiftData are trademarks of Apple Inc.</span>
+      </p>
+    </div>
     <div class="footer-grid">
-      <div>
-        <div class="footer-brand">
-          <img src="assets/icon.png" alt="" />
-          Taska
-        </div>
-        <p class="footer-tag">
-          <span data-lang="it" class="active-lang">Le tue finanze, mese per mese.</span>
-          <span data-lang="en">Your finances, month by month.</span>
-        </p>
+      <div class="col-brand">
+        <img src="assets/icon.png" alt="" />
+        <strong>Taska</strong>
       </div>
       <div>
-        <h6 data-lang="it" style="display:block">Prodotto</h6>
-        <h6 data-lang="en">Product</h6>
+        <h6>
+          <span data-lang="it" class="active-lang">Prodotto</span>
+          <span data-lang="en">Product</span>
+        </h6>
         <ul>
-          <li><a href="index.html#features" data-lang="it" class="active-lang">Funzioni</a><a href="index.html#features" data-lang="en">Features</a></li>
-          <li><a href="index.html#pricing" data-lang="it" class="active-lang">Prezzi</a><a href="index.html#pricing" data-lang="en">Pricing</a></li>
-          <li><a href="index.html#how" data-lang="it" class="active-lang">Come funziona</a><a href="index.html#how" data-lang="en">How it works</a></li>
+          <li><a href="index.html#funzioni"><span data-lang="it" class="active-lang">Funzioni</span><span data-lang="en">Features</span></a></li>
+          <li><a href="index.html#come"><span data-lang="it" class="active-lang">Come funziona</span><span data-lang="en">How it works</span></a></li>
+          <li><a href="index.html#prezzi"><span data-lang="it" class="active-lang">Prezzi</span><span data-lang="en">Pricing</span></a></li>
+          <li><a href="https://apps.apple.com/app/taska" target="_blank" rel="noopener">App Store</a></li>
         </ul>
       </div>
       <div>
-        <h6 data-lang="it" style="display:block">Aiuto</h6>
-        <h6 data-lang="en">Help</h6>
+        <h6>
+          <span data-lang="it" class="active-lang">Aiuto</span>
+          <span data-lang="en">Help</span>
+        </h6>
         <ul>
-          <li><a href="support.html" data-lang="it" class="active-lang">Supporto</a><a href="support.html" data-lang="en">Support</a></li>
+          <li><a href="support.html"><span data-lang="it" class="active-lang">Supporto</span><span data-lang="en">Support</span></a></li>
           <li><a href="mailto:tasca.app.support@gmail.com">Email</a></li>
+          <li><a href="support.html#faq"><span data-lang="it" class="active-lang">Guide</span><span data-lang="en">Guides</span></a></li>
         </ul>
       </div>
       <div>
-        <h6 data-lang="it" style="display:block">Legale</h6>
-        <h6 data-lang="en">Legal</h6>
+        <h6>
+          <span data-lang="it" class="active-lang">Legale</span>
+          <span data-lang="en">Legal</span>
+        </h6>
         <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html" data-lang="it" class="active-lang">Termini d'Uso</a><a href="terms.html" data-lang="en">Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html"><span data-lang="it" class="active-lang">Termini d'uso</span><span data-lang="en">Terms of use</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>
+          <span data-lang="it" class="active-lang">Sviluppatore</span>
+          <span data-lang="en">Developer</span>
+        </h6>
+        <ul>
+          <li>Pasquale Aceto</li>
+          <li>Roma, Italia</li>
+          <li><a href="mailto:tasca.app.support@gmail.com">tasca.app.support@gmail.com</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Pasquale Aceto · Roma, Italia</span>
-      <span>
+      <span>© 2026 Pasquale Aceto. <span data-lang="it" class="active-lang">Tutti i diritti riservati.</span><span data-lang="en">All rights reserved.</span></span>
+      <span class="right">
         <span data-lang="it" class="active-lang">Costruito con SwiftUI &amp; SwiftData</span>
         <span data-lang="en">Built with SwiftUI &amp; SwiftData</span>
       </span>

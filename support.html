@@ -1,313 +1,328 @@
 <!doctype html>
 <html lang="it">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#F6F3EC" />
-<title data-titles='{"it":"Supporto — Taska","en":"Support — Taska"}'>Supporto — Taska</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="icon" type="image/png" href="assets/icon.png" />
-<link rel="apple-touch-icon" href="assets/icon.png" />
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <title data-titles='{"it":"Supporto — Taska","en":"Support — Taska"}'>Supporto — Taska</title>
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<nav class="nav">
+<nav class="nav" id="nav">
   <div class="nav-inner">
     <a class="brand" href="index.html"><img src="assets/icon.png" alt="" /><span>Taska</span></a>
-    <div class="nav-links">
-      <a href="index.html#features" data-lang="it" class="active-lang">Funzioni</a><a href="index.html#features" data-lang="en">Features</a>
-      <a href="index.html#pricing" data-lang="it" class="active-lang">Prezzi</a><a href="index.html#pricing" data-lang="en">Pricing</a>
-      <a href="support.html" data-lang="it" class="active-lang">Supporto</a><a href="support.html" data-lang="en">Support</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#funzioni" data-lang="it" class="active-lang">Funzioni</a>
+      <a href="index.html#funzioni" data-lang="en">Features</a>
+      <a href="index.html#prezzi" data-lang="it" class="active-lang">Prezzi</a>
+      <a href="index.html#prezzi" data-lang="en">Pricing</a>
+      <a href="support.html" data-lang="it" class="active-lang">Supporto</a>
+      <a href="support.html" data-lang="en">Support</a>
       <span class="lang-switch" role="group">
-        <button data-set-lang="it" class="active">IT</button>
-        <button data-set-lang="en">EN</button>
+        <button data-set-lang="it" class="active"><span>IT</span></button>
+        <button data-set-lang="en"><span>EN</span></button>
       </span>
-      <a class="btn-cta" href="index.html#download">
+      <a class="nav-cta" href="index.html#download">
         <span data-lang="it" class="active-lang">Scarica</span><span data-lang="en">Download</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
     </div>
-    <button class="hamburger"><span></span><span></span></button>
+    <button class="hamburger" id="hamburger"><span></span><span></span></button>
   </div>
 </nav>
 
-<header class="page-head">
+<header class="page-hero">
   <div class="wrap">
-    <div class="eyebrow"><span class="dot"></span>
+    <div class="eyebrow">
       <span data-lang="it" class="active-lang">Centro assistenza</span>
       <span data-lang="en">Help center</span>
     </div>
     <h1>
-      <span data-lang="it" class="active-lang">Siamo qui per <em>aiutarti.</em></span>
-      <span data-lang="en">We're here to <em>help.</em></span>
+      <span data-lang="it" class="active-lang">Siamo qui per <span class="gradient-text">aiutarti.</span></span>
+      <span data-lang="en">We're here to <span class="gradient-text">help.</span></span>
     </h1>
-    <p style="margin-top:24px;color:var(--ink-soft);max-width:640px;font-size:17px;line-height:1.6">
-      <span data-lang="it" class="active-lang">Hai una domanda, un suggerimento o hai trovato un problema? Scrivi direttamente a chi sviluppa Taska. Risposte rapide, in italiano o inglese.</span>
-      <span data-lang="en">Got a question, a suggestion or spotted a bug? Write directly to the person who builds Taska. Fast replies, in English or Italian.</span>
+    <p class="lead mute">
+      <span data-lang="it" class="active-lang">Una domanda, un suggerimento, un problema? Scrivi direttamente a chi sviluppa Taska. Risposte rapide, in italiano o inglese.</span>
+      <span data-lang="en">Got a question, a suggestion or a bug? Write directly to the person who builds Taska. Fast replies, in English or Italian.</span>
     </p>
   </div>
 </header>
 
-<main class="page-content">
-  <div class="wrap">
+<main class="page-body">
 
-    <!-- Contact cards -->
-    <section class="support-grid">
-      <div class="support-card">
-        <div class="ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <h3 data-lang="it" style="display:block">Email</h3>
-        <h3 data-lang="en">Email</h3>
-        <p data-lang="it" style="display:block">Per richieste, segnalazioni o domande sulla privacy. Risposta entro 48 ore.</p>
-        <p data-lang="en">For requests, reports or privacy questions. Reply within 48 hours.</p>
-        <a class="link" href="mailto:tasca.app.support@gmail.com">tasca.app.support@gmail.com</a>
+  <!-- Contact cards -->
+  <section class="support-grid">
+    <div class="support-card">
+      <div class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       </div>
-
-      <div class="support-card">
-        <div class="ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <h3 data-lang="it" style="display:block">Suggerimenti</h3>
-        <h3 data-lang="en">Suggestions</h3>
-        <p data-lang="it" style="display:block">Hai un'idea per migliorare Taska? Le richieste degli utenti diventano spesso nuove funzioni.</p>
-        <p data-lang="en">Got an idea to improve Taska? User requests often turn into new features.</p>
-        <a class="link" href="mailto:tasca.app.support@gmail.com?subject=Suggerimento%20Taska" data-lang="it" style="display:inline-block">Invia un suggerimento →</a>
-        <a class="link" href="mailto:tasca.app.support@gmail.com?subject=Taska%20suggestion" data-lang="en">Send a suggestion →</a>
+      <h3>Email</h3>
+      <p>
+        <span data-lang="it" class="active-lang">Per richieste, segnalazioni o domande sulla privacy. Risposta entro 48 ore.</span>
+        <span data-lang="en">For requests, reports or privacy questions. Reply within 48 hours.</span>
+      </p>
+      <a class="link" href="mailto:tasca.app.support@gmail.com">tasca.app.support@gmail.com</a>
+    </div>
+    <div class="support-card">
+      <div class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
       </div>
-    </section>
-
-    <!-- Quick guides / FAQ articles -->
-    <section style="margin-bottom:80px">
-      <div style="display:flex;align-items:end;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:16px">
-        <div>
-          <div class="eyebrow" style="margin-bottom:12px"><span class="dot"></span>
-            <span data-lang="it" class="active-lang">Guide rapide</span>
-            <span data-lang="en">Quick guides</span>
-          </div>
-          <h2 class="h-display h-3">
-            <span data-lang="it" class="active-lang">Le risposte più comuni</span>
-            <span data-lang="en">Most common answers</span>
-          </h2>
-        </div>
+      <h3>
+        <span data-lang="it" class="active-lang">Suggerimenti</span>
+        <span data-lang="en">Suggestions</span>
+      </h3>
+      <p>
+        <span data-lang="it" class="active-lang">Un'idea per migliorare Taska? Le richieste degli utenti diventano spesso nuove funzioni.</span>
+        <span data-lang="en">Got an idea to improve Taska? User requests often turn into new features.</span>
+      </p>
+      <a class="link" href="mailto:tasca.app.support@gmail.com?subject=Suggerimento%20Taska">
+        <span data-lang="it" class="active-lang">Invia un suggerimento ›</span>
+        <span data-lang="en">Send a suggestion ›</span>
+      </a>
+    </div>
+    <div class="support-card">
+      <div class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
       </div>
+      <h3>
+        <span data-lang="it" class="active-lang">Segnala un problema</span>
+        <span data-lang="en">Report an issue</span>
+      </h3>
+      <p>
+        <span data-lang="it" class="active-lang">Hai trovato un bug o un comportamento strano? Aiutaci a sistemarlo subito.</span>
+        <span data-lang="en">Found a bug or odd behavior? Help us fix it right away.</span>
+      </p>
+      <a class="link" href="mailto:tasca.app.support@gmail.com?subject=Bug%20Taska">
+        <span data-lang="it" class="active-lang">Apri una segnalazione ›</span>
+        <span data-lang="en">Open a report ›</span>
+      </a>
+    </div>
+  </section>
 
-      <div class="faq">
-        <details open>
-          <summary>
+  <!-- FAQ -->
+  <div class="wrap" id="faq">
+    <div class="faq-block-head">
+      <div class="eyebrow">
+        <span data-lang="it" class="active-lang">Guide rapide</span>
+        <span data-lang="en">Quick guides</span>
+      </div>
+      <h2 class="display h-3">
+        <span data-lang="it" class="active-lang">Le risposte più comuni.</span>
+        <span data-lang="en">The most common answers.</span>
+      </h2>
+    </div>
+
+    <div class="faq">
+      <details open>
+        <summary>
+          <span>
             <span data-lang="it" class="active-lang">Come inizio a usare Taska?</span>
             <span data-lang="en">How do I get started with Taska?</span>
-            <span class="plus">+</span>
-          </summary>
-          <div class="faq-answer">
-            <span data-lang="it" class="active-lang">Dopo l'installazione segui l'onboarding (lingua, presentazione delle funzioni, accettazione termini). Poi aggiungi un primo conto, qualche categoria e inserisci le spese previste del mese. In meno di 5 minuti hai già il tuo primo budget.</span>
-            <span data-lang="en">After installing, follow the onboarding (language, feature tour, terms acceptance). Then add a first account, a few categories and your planned expenses for the month. In under 5 minutes you've got your first budget set up.</span>
-          </div>
-        </details>
+          </span>
+          <span class="plus">+</span>
+        </summary>
+        <div class="faq-answer">
+          <span data-lang="it" class="active-lang">Dopo l'installazione segui l'onboarding (lingua, presentazione delle funzioni, accettazione termini). Poi aggiungi un primo conto, qualche categoria e inserisci le spese previste del mese. In meno di 5 minuti hai già il tuo primo budget.</span>
+          <span data-lang="en">After installing, follow the onboarding (language, feature tour, terms acceptance). Then add a first account, a few categories and your planned expenses for the month. In under 5 minutes you've got your first budget set up.</span>
+        </div>
+      </details>
 
-        <details>
-          <summary>
+      <details>
+        <summary>
+          <span>
             <span data-lang="it" class="active-lang">Come collego una spesa effettiva a una prevista?</span>
             <span data-lang="en">How do I link an actual expense to a planned one?</span>
-            <span class="plus">+</span>
-          </summary>
-          <div class="faq-answer">
-            <span data-lang="it" class="active-lang">Quando aggiungi una spesa effettiva, puoi selezionare la spesa prevista corrispondente nello stesso mese: l'importo verrà sottratto dal budget di quella voce. Puoi anche cambiare o rimuovere l'associazione in seguito.</span>
-            <span data-lang="en">When you add an actual expense, you can select the corresponding planned expense in the same month: the amount will be subtracted from that item's budget. You can change or remove the link later.</span>
-          </div>
-        </details>
+          </span>
+          <span class="plus">+</span>
+        </summary>
+        <div class="faq-answer">
+          <span data-lang="it" class="active-lang">Quando aggiungi una spesa effettiva, puoi selezionare la spesa prevista corrispondente nello stesso mese: l'importo verrà sottratto dal budget di quella voce. Puoi anche cambiare o rimuovere l'associazione in seguito.</span>
+          <span data-lang="en">When you add an actual expense, you can select the corresponding planned expense in the same month: the amount will be subtracted from that item's budget. You can change or remove the link later.</span>
+        </div>
+      </details>
 
-        <details>
-          <summary>
+      <details>
+        <summary>
+          <span>
             <span data-lang="it" class="active-lang">Come imposto una spesa ricorrente?</span>
             <span data-lang="en">How do I set up a recurring expense?</span>
-            <span class="plus">+</span>
-          </summary>
-          <div class="faq-answer">
-            <span data-lang="it" class="active-lang">Vai su "Ricorrenze" dalla schermata Transazioni. Aggiungi nome, importo, categoria, conto e cadenza (mensile, trimestrale, ecc.). Ogni mese Taska genera automaticamente la spesa prevista corrispondente.</span>
-            <span data-lang="en">Go to "Recurrences" from the Transactions screen. Add name, amount, category, account and frequency (monthly, quarterly, etc.). Every month Taska automatically generates the planned expense.</span>
-          </div>
-        </details>
+          </span>
+          <span class="plus">+</span>
+        </summary>
+        <div class="faq-answer">
+          <span data-lang="it" class="active-lang">Vai su "Ricorrenze" dalla schermata Transazioni. Aggiungi nome, importo, categoria, conto e cadenza (mensile, trimestrale, ecc.). Ogni mese Taska genera automaticamente la spesa prevista corrispondente.</span>
+          <span data-lang="en">Go to "Recurrences" from the Transactions screen. Add name, amount, category, account and frequency (monthly, quarterly, etc.). Every month Taska automatically generates the planned expense.</span>
+        </div>
+      </details>
 
-        <details>
-          <summary>
+      <details>
+        <summary>
+          <span>
             <span data-lang="it" class="active-lang">Come attivo il backup su iCloud?</span>
             <span data-lang="en">How do I enable iCloud backup?</span>
-            <span class="plus">+</span>
-          </summary>
-          <div class="faq-answer">
-            <span data-lang="it" class="active-lang">Apri Impostazioni → Backup automatico, attiva l'interruttore e scegli la cadenza (giornaliera, settimanale, mensile). Il file viene salvato nel tuo iCloud Drive personale, accessibile solo a te.</span>
-            <span data-lang="en">Open Settings → Automatic backup, toggle it on and choose the frequency (daily, weekly, monthly). The file is saved to your personal iCloud Drive, accessible only by you.</span>
-          </div>
-        </details>
+          </span>
+          <span class="plus">+</span>
+        </summary>
+        <div class="faq-answer">
+          <span data-lang="it" class="active-lang">Apri Impostazioni → Backup automatico, attiva l'interruttore e scegli la cadenza (giornaliera, settimanale, mensile). Il file viene salvato nel tuo iCloud Drive personale, accessibile solo a te.</span>
+          <span data-lang="en">Open Settings → Automatic backup, toggle it on and choose the frequency (daily, weekly, monthly). The file is saved to your personal iCloud Drive, accessible only by you.</span>
+        </div>
+      </details>
 
-        <details>
-          <summary>
+      <details>
+        <summary>
+          <span>
             <span data-lang="it" class="active-lang">Come trasferisco i dati su un nuovo iPhone?</span>
             <span data-lang="en">How do I move my data to a new iPhone?</span>
-            <span class="plus">+</span>
-          </summary>
-          <div class="faq-answer">
-            <span data-lang="it" class="active-lang">Se hai attivato il backup iCloud: installa Taska sul nuovo dispositivo (con lo stesso Apple ID) e segui la procedura di ripristino. In alternativa, esporta manualmente in JSON o CSV dal vecchio iPhone e importa sul nuovo: Impostazioni → Importa transazioni.</span>
-            <span data-lang="en">If iCloud backup is on: install Taska on the new device (using the same Apple ID) and follow the restore flow. Otherwise, export manually as JSON or CSV from the old iPhone and import on the new one: Settings → Import transactions.</span>
-          </div>
-        </details>
+          </span>
+          <span class="plus">+</span>
+        </summary>
+        <div class="faq-answer">
+          <span data-lang="it" class="active-lang">Se hai attivato il backup iCloud: installa Taska sul nuovo dispositivo (con lo stesso Apple ID) e segui la procedura di ripristino. In alternativa, esporta manualmente in JSON o CSV dal vecchio iPhone e importa sul nuovo: Impostazioni → Importa transazioni.</span>
+          <span data-lang="en">If iCloud backup is on: install Taska on the new device (using the same Apple ID) and follow the restore flow. Otherwise, export manually as JSON or CSV from the old iPhone and import on the new one: Settings → Import transactions.</span>
+        </div>
+      </details>
 
-        <details>
-          <summary>
+      <details>
+        <summary>
+          <span>
             <span data-lang="it" class="active-lang">Come aggiungo Taska alla schermata Home con il widget?</span>
             <span data-lang="en">How do I add the Taska widget to the Home Screen?</span>
-            <span class="plus">+</span>
-          </summary>
-          <div class="faq-answer">
-            <span data-lang="it" class="active-lang">Tieni premuto in un punto vuoto della Home, tocca il "+" in alto, cerca "Taska" e scegli il widget che preferisci (Riepilogo, Saldo o Budget). Stesso meccanismo per Lock Screen e Centro di Controllo.</span>
-            <span data-lang="en">Long-press an empty spot on the Home Screen, tap "+" at the top, search "Taska" and pick the widget you prefer (Summary, Balance or Budget). Same flow for Lock Screen and Control Center.</span>
-          </div>
-        </details>
+          </span>
+          <span class="plus">+</span>
+        </summary>
+        <div class="faq-answer">
+          <span data-lang="it" class="active-lang">Tieni premuto in un punto vuoto della Home, tocca il "+" in alto, cerca "Taska" e scegli il widget che preferisci (Riepilogo, Saldo o Budget). Stesso meccanismo per Lock Screen e Centro di Controllo.</span>
+          <span data-lang="en">Long-press an empty spot on the Home Screen, tap "+" at the top, search "Taska" and pick the widget you prefer (Summary, Balance or Budget). Same flow for Lock Screen and Control Center.</span>
+        </div>
+      </details>
 
-        <details>
-          <summary>
+      <details>
+        <summary>
+          <span>
             <span data-lang="it" class="active-lang">Come disdico l'abbonamento?</span>
             <span data-lang="en">How do I cancel my subscription?</span>
-            <span class="plus">+</span>
-          </summary>
-          <div class="faq-answer">
-            <span data-lang="it" class="active-lang">In Taska: Impostazioni → Abbonamento → Gestisci. Oppure dal tuo iPhone: Impostazioni → tuo nome → Abbonamenti → Taska Premium → Annulla. La disdetta blocca il rinnovo successivo, l'accesso continua fino alla scadenza già pagata.</span>
-            <span data-lang="en">Inside Taska: Settings → Subscription → Manage. Or from your iPhone: Settings → your name → Subscriptions → Taska Premium → Cancel. Cancelling stops the next renewal; access continues until the period you've paid for ends.</span>
-          </div>
-        </details>
+          </span>
+          <span class="plus">+</span>
+        </summary>
+        <div class="faq-answer">
+          <span data-lang="it" class="active-lang">In Taska: Impostazioni → Abbonamento → Gestisci. Oppure dal tuo iPhone: Impostazioni → tuo nome → Abbonamenti → Taska Premium → Annulla. La disdetta blocca il rinnovo successivo, l'accesso continua fino alla scadenza già pagata.</span>
+          <span data-lang="en">Inside Taska: Settings → Subscription → Manage. Or from your iPhone: Settings → your name → Subscriptions → Taska Premium → Cancel. Cancelling stops the next renewal; access continues until the period you've paid for ends.</span>
+        </div>
+      </details>
 
-        <details>
-          <summary>
+      <details>
+        <summary>
+          <span>
             <span data-lang="it" class="active-lang">Come richiedo un rimborso?</span>
             <span data-lang="en">How do I request a refund?</span>
-            <span class="plus">+</span>
-          </summary>
-          <div class="faq-answer">
-            <span data-lang="it" class="active-lang">I rimborsi sono gestiti da Apple. Vai su <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>, accedi con il tuo Apple ID, trova l'acquisto Taska e segui le istruzioni. Lo sviluppatore non può emettere rimborsi diretti.</span>
-            <span data-lang="en">Refunds are handled by Apple. Go to <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>, sign in with your Apple ID, find the Taska purchase and follow the instructions. The developer cannot issue direct refunds.</span>
-          </div>
-        </details>
+          </span>
+          <span class="plus">+</span>
+        </summary>
+        <div class="faq-answer">
+          <span data-lang="it" class="active-lang">I rimborsi sono gestiti da Apple. Vai su <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>, accedi con il tuo Apple ID, trova l'acquisto Taska e segui le istruzioni. Lo sviluppatore non può emettere rimborsi diretti.</span>
+          <span data-lang="en">Refunds are handled by Apple. Go to <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>, sign in with your Apple ID, find the Taska purchase and follow the instructions. The developer cannot issue direct refunds.</span>
+        </div>
+      </details>
 
-        <details>
-          <summary>
+      <details>
+        <summary>
+          <span>
             <span data-lang="it" class="active-lang">Cosa succede se cancello l'app?</span>
             <span data-lang="en">What happens if I delete the app?</span>
-            <span class="plus">+</span>
-          </summary>
-          <div class="faq-answer">
-            <span data-lang="it" class="active-lang">Cancellando Taska perdi i dati locali. Se avevi attivato il backup iCloud, ritrovi tutto reinstallando l'app. L'abbonamento Apple continua fino alla scadenza naturale: ricordati di disdire dalle Impostazioni Apple ID se non vuoi più rinnovarlo.</span>
-            <span data-lang="en">Deleting Taska wipes local data. If iCloud backup was on, you'll get everything back by reinstalling. The Apple subscription continues until natural expiration: remember to cancel from your Apple ID settings if you don't want it to renew.</span>
-          </div>
-        </details>
+          </span>
+          <span class="plus">+</span>
+        </summary>
+        <div class="faq-answer">
+          <span data-lang="it" class="active-lang">Cancellando Taska perdi i dati locali. Se avevi attivato il backup iCloud, ritrovi tutto reinstallando l'app. L'abbonamento Apple continua fino alla scadenza naturale: ricordati di disdire dalle Impostazioni Apple ID se non vuoi più rinnovarlo.</span>
+          <span data-lang="en">Deleting Taska wipes local data. If iCloud backup was on, you'll get everything back by reinstalling. The Apple subscription continues until natural expiration: remember to cancel from your Apple ID settings if you don't want it to renew.</span>
+        </div>
+      </details>
 
-        <details>
-          <summary>
+      <details>
+        <summary>
+          <span>
             <span data-lang="it" class="active-lang">Posso usare Taska su iPad o Mac?</span>
             <span data-lang="en">Can I use Taska on iPad or Mac?</span>
-            <span class="plus">+</span>
-          </summary>
-          <div class="faq-answer">
-            <span data-lang="it" class="active-lang">Al momento Taska è progettata e ottimizzata per iPhone. Versioni dedicate per iPad o Mac non sono attualmente in roadmap, ma se ne ricevo molte richieste valuterò di aggiungerle in futuro.</span>
-            <span data-lang="en">Right now Taska is designed and optimized for iPhone. Dedicated iPad or Mac versions aren't on the current roadmap, but I'll consider adding them in the future if there's enough demand.</span>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <!-- App info -->
-    <section style="margin-bottom:60px">
-      <div class="eyebrow" style="margin-bottom:16px"><span class="dot"></span>
-        <span data-lang="it" class="active-lang">Informazioni app</span>
-        <span data-lang="en">App information</span>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;background:var(--paper);border:1px solid var(--rule-soft);border-radius:24px;padding:36px">
-        <div>
-          <div style="font-family:var(--mono);font-size:11px;color:var(--ink-mute);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">
-            <span data-lang="it" class="active-lang">Sviluppatore</span>
-            <span data-lang="en">Developer</span>
-          </div>
-          <div style="font-family:var(--display);font-size:18px;font-weight:500;letter-spacing:-0.01em">Pasquale Aceto</div>
+          </span>
+          <span class="plus">+</span>
+        </summary>
+        <div class="faq-answer">
+          <span data-lang="it" class="active-lang">Al momento Taska è progettata e ottimizzata per iPhone. Versioni dedicate per iPad o Mac non sono attualmente in roadmap, ma se ne ricevo molte richieste valuterò di aggiungerle in futuro.</span>
+          <span data-lang="en">Right now Taska is designed and optimized for iPhone. Dedicated iPad or Mac versions aren't on the current roadmap, but I'll consider adding them in the future if there's enough demand.</span>
         </div>
-        <div>
-          <div style="font-family:var(--mono);font-size:11px;color:var(--ink-mute);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">
-            <span data-lang="it" class="active-lang">Sede</span>
-            <span data-lang="en">Based in</span>
-          </div>
-          <div style="font-family:var(--display);font-size:18px;font-weight:500;letter-spacing:-0.01em">Roma, Italia</div>
-        </div>
-        <div>
-          <div style="font-family:var(--mono);font-size:11px;color:var(--ink-mute);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">
-            <span data-lang="it" class="active-lang">Versione</span>
-            <span data-lang="en">Version</span>
-          </div>
-          <div style="font-family:var(--display);font-size:18px;font-weight:500;letter-spacing:-0.01em">1.0</div>
-        </div>
-        <div>
-          <div style="font-family:var(--mono);font-size:11px;color:var(--ink-mute);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">
-            <span data-lang="it" class="active-lang">Compatibilità</span>
-            <span data-lang="en">Requires</span>
-          </div>
-          <div style="font-family:var(--display);font-size:18px;font-weight:500;letter-spacing:-0.01em">iOS 17+</div>
-        </div>
-        <div>
-          <div style="font-family:var(--mono);font-size:11px;color:var(--ink-mute);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">
-            <span data-lang="it" class="active-lang">Lingue</span>
-            <span data-lang="en">Languages</span>
-          </div>
-          <div style="font-family:var(--display);font-size:18px;font-weight:500;letter-spacing:-0.01em">Italiano · English</div>
-        </div>
-        <div>
-          <div style="font-family:var(--mono);font-size:11px;color:var(--ink-mute);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">
-            <span data-lang="it" class="active-lang">Età</span>
-            <span data-lang="en">Age rating</span>
-          </div>
-          <div style="font-family:var(--display);font-size:18px;font-weight:500;letter-spacing:-0.01em">4+</div>
-        </div>
-      </div>
-    </section>
-
+      </details>
+    </div>
   </div>
+
+  <!-- App info -->
+  <div class="info-grid">
+    <div class="item">
+      <div class="k"><span data-lang="it" class="active-lang">Sviluppatore</span><span data-lang="en">Developer</span></div>
+      <div class="v">Pasquale Aceto</div>
+    </div>
+    <div class="item">
+      <div class="k"><span data-lang="it" class="active-lang">Sede</span><span data-lang="en">Based in</span></div>
+      <div class="v">Roma, Italia</div>
+    </div>
+    <div class="item">
+      <div class="k"><span data-lang="it" class="active-lang">Versione</span><span data-lang="en">Version</span></div>
+      <div class="v">1.0</div>
+    </div>
+    <div class="item">
+      <div class="k"><span data-lang="it" class="active-lang">Compatibilità</span><span data-lang="en">Requires</span></div>
+      <div class="v">iOS 17+</div>
+    </div>
+    <div class="item">
+      <div class="k"><span data-lang="it" class="active-lang">Lingue</span><span data-lang="en">Languages</span></div>
+      <div class="v">Italiano · English</div>
+    </div>
+    <div class="item">
+      <div class="k"><span data-lang="it" class="active-lang">Età</span><span data-lang="en">Age rating</span></div>
+      <div class="v">4+</div>
+    </div>
+  </div>
+
 </main>
 
 <footer class="footer">
-  <div class="wrap">
+  <div class="wrap-wide">
     <div class="footer-grid">
+      <div class="col-brand"><img src="assets/icon.png" alt="" /><strong>Taska</strong></div>
       <div>
-        <div class="footer-brand"><img src="assets/icon.png" alt="" />Taska</div>
-        <p class="footer-tag">
-          <span data-lang="it" class="active-lang">Le tue finanze, mese per mese.</span>
-          <span data-lang="en">Your finances, month by month.</span>
-        </p>
-      </div>
-      <div>
-        <h6 data-lang="it" style="display:block">Prodotto</h6><h6 data-lang="en">Product</h6>
+        <h6><span data-lang="it" class="active-lang">Prodotto</span><span data-lang="en">Product</span></h6>
         <ul>
-          <li><a href="index.html#features" data-lang="it" class="active-lang">Funzioni</a><a href="index.html#features" data-lang="en">Features</a></li>
-          <li><a href="index.html#pricing" data-lang="it" class="active-lang">Prezzi</a><a href="index.html#pricing" data-lang="en">Pricing</a></li>
+          <li><a href="index.html#funzioni"><span data-lang="it" class="active-lang">Funzioni</span><span data-lang="en">Features</span></a></li>
+          <li><a href="index.html#prezzi"><span data-lang="it" class="active-lang">Prezzi</span><span data-lang="en">Pricing</span></a></li>
         </ul>
       </div>
       <div>
-        <h6 data-lang="it" style="display:block">Aiuto</h6><h6 data-lang="en">Help</h6>
+        <h6><span data-lang="it" class="active-lang">Aiuto</span><span data-lang="en">Help</span></h6>
         <ul>
-          <li><a href="support.html" data-lang="it" class="active-lang">Supporto</a><a href="support.html" data-lang="en">Support</a></li>
+          <li><a href="support.html"><span data-lang="it" class="active-lang">Supporto</span><span data-lang="en">Support</span></a></li>
           <li><a href="mailto:tasca.app.support@gmail.com">Email</a></li>
         </ul>
       </div>
       <div>
-        <h6 data-lang="it" style="display:block">Legale</h6><h6 data-lang="en">Legal</h6>
+        <h6><span data-lang="it" class="active-lang">Legale</span><span data-lang="en">Legal</span></h6>
         <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html" data-lang="it" class="active-lang">Termini d'Uso</a><a href="terms.html" data-lang="en">Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html"><span data-lang="it" class="active-lang">Termini d'uso</span><span data-lang="en">Terms of use</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h6><span data-lang="it" class="active-lang">Sviluppatore</span><span data-lang="en">Developer</span></h6>
+        <ul>
+          <li>Pasquale Aceto</li>
+          <li>Roma, Italia</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Pasquale Aceto · Roma, Italia</span>
-      <span>
+      <span>© 2026 Pasquale Aceto. <span data-lang="it" class="active-lang">Tutti i diritti riservati.</span><span data-lang="en">All rights reserved.</span></span>
+      <span class="right">
         <span data-lang="it" class="active-lang">Costruito con SwiftUI &amp; SwiftData</span>
         <span data-lang="en">Built with SwiftUI &amp; SwiftData</span>
       </span>

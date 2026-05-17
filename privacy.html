@@ -1,73 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasca — Privacy Policy</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
-            line-height: 1.7;
-            color: #1d1d1f;
-            background: #fbfbfd;
-            padding: 2rem 1.25rem;
-            max-width: 720px;
-            margin: 0 auto;
-        }
-        h1 { font-size: 2rem; font-weight: 700; margin-bottom: .25rem; }
-        h2 { font-size: 1.15rem; font-weight: 600; margin-top: 2rem; margin-bottom: .5rem; }
-        p, li { font-size: .95rem; color: #333; }
-        ul { padding-left: 1.25rem; margin-top: .25rem; }
-        li { margin-bottom: .25rem; }
-        .subtitle { color: #86868b; font-size: .85rem; margin-bottom: 2rem; }
-        a { color: #0066cc; text-decoration: none; }
-        footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e5e5; font-size: .8rem; color: #86868b; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <title data-titles='{"it":"Privacy Policy — Taska","en":"Privacy Policy — Taska"}'>Privacy Policy — Taska</title>
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p class="subtitle">Tasca — App per la gestione delle finanze personali<br>Titolare: Pasquale Aceto<br>Ultimo aggiornamento: aprile 2026</p>
 
-    <h2>1. Raccolta dei dati</h2>
-    <p>Tasca <strong>non raccoglie, trasmette o condivide alcun dato personale</strong>. Tutti i dati inseriti nell'app (conti, spese, categorie, saldi) sono salvati esclusivamente sul tuo dispositivo tramite il framework SwiftData di Apple.</p>
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><img src="assets/icon.png" alt="" /><span>Taska</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#funzioni" data-lang="it" class="active-lang">Funzioni</a>
+      <a href="index.html#funzioni" data-lang="en">Features</a>
+      <a href="index.html#prezzi" data-lang="it" class="active-lang">Prezzi</a>
+      <a href="index.html#prezzi" data-lang="en">Pricing</a>
+      <a href="support.html" data-lang="it" class="active-lang">Supporto</a>
+      <a href="support.html" data-lang="en">Support</a>
+      <span class="lang-switch" role="group">
+        <button data-set-lang="it" class="active"><span>IT</span></button>
+        <button data-set-lang="en"><span>EN</span></button>
+      </span>
+      <a class="nav-cta" href="index.html#download">
+        <span data-lang="it" class="active-lang">Scarica</span><span data-lang="en">Download</span>
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span></button>
+  </div>
+</nav>
 
-    <h2>2. Archiviazione locale</h2>
-    <p>I tuoi dati risiedono nel sandbox dell'app sul dispositivo. Nessuna informazione viene inviata a server esterni, servizi cloud o terze parti. I backup vengono creati localmente e condivisi solo se l'utente li esporta manualmente.</p>
+<header class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span data-lang="it" class="active-lang">Privacy</span>
+      <span data-lang="en">Privacy</span>
+    </div>
+    <h1>
+      <span data-lang="it" class="active-lang">Privacy <span class="gradient-text">Policy.</span></span>
+      <span data-lang="en">Privacy <span class="gradient-text">Policy.</span></span>
+    </h1>
+    <p class="lead">
+      <span data-lang="it" class="active-lang">Taska non raccoglie dati personali. Tutto resta sul tuo iPhone.</span>
+      <span data-lang="en">Taska collects no personal data. Everything stays on your iPhone.</span>
+    </p>
+    <p class="lead mute" style="font-size:14px;margin-top:18px">
+      <span data-lang="it" class="active-lang">Titolare: Pasquale Aceto · Ultimo aggiornamento: aprile 2026</span>
+      <span data-lang="en">Owner: Pasquale Aceto · Last updated: April 2026</span>
+    </p>
+  </div>
+</header>
 
-    <h2>3. Widget</h2>
-    <p>Il widget della schermata Home e della schermata di blocco legge i dati tramite un App Group locale. Nessun dato lascia il dispositivo.</p>
+<main class="page-body">
+  <div class="wrap">
 
-    <h2>4. Sicurezza e autenticazione</h2>
-    <p>L'accesso all'app può essere protetto con Face ID, Touch ID o un PIN dedicato. Tasca utilizza il framework LocalAuthentication di Apple; nessuna credenziale biometrica viene memorizzata o elaborata dall'app.</p>
+    <!-- IT version -->
+    <div data-lang="it" class="active-lang block-lang">
+      <h2>1. Raccolta dei dati</h2>
+      <p>Taska <strong>non raccoglie, trasmette o condivide alcun dato personale</strong>. Tutti i dati inseriti nell'app (conti, spese, categorie, saldi) sono salvati esclusivamente sul tuo dispositivo tramite il framework SwiftData di Apple.</p>
 
-    <h2>5. Notifiche</h2>
-    <p>Le notifiche di Tasca sono esclusivamente locali, generate dal dispositivo senza coinvolgere server esterni.</p>
+      <h2>2. Archiviazione locale</h2>
+      <p>I tuoi dati risiedono nel sandbox dell'app sul dispositivo. Nessuna informazione viene inviata a server esterni, servizi cloud o terze parti. I backup vengono creati localmente e condivisi solo se l'utente li esporta manualmente.</p>
 
-    <h2>6. Servizi di terze parti</h2>
-    <p>Tasca non integra SDK di analisi, pubblicità, tracciamento, crash reporting né altri servizi di terze parti.</p>
+      <h2>3. Widget</h2>
+      <p>Il widget della schermata Home e della schermata di blocco legge i dati tramite un App Group locale. Nessun dato lascia il dispositivo.</p>
 
-    <h2>7. Dati raccolti — riepilogo</h2>
-    <ul>
+      <h2>4. Sicurezza e autenticazione</h2>
+      <p>L'accesso all'app può essere protetto con Face ID, Touch ID o un PIN dedicato. Taska utilizza il framework LocalAuthentication di Apple; nessuna credenziale biometrica viene memorizzata o elaborata dall'app.</p>
+
+      <h2>5. Notifiche</h2>
+      <p>Le notifiche di Taska sono esclusivamente locali, generate dal dispositivo senza coinvolgere server esterni.</p>
+
+      <h2>6. Servizi di terze parti</h2>
+      <p>Taska non integra SDK di analisi, pubblicità, tracciamento, crash reporting né altri servizi di terze parti.</p>
+
+      <h2>7. Dati raccolti — riepilogo</h2>
+      <ul>
         <li>Dati personali raccolti: <strong>nessuno</strong></li>
         <li>Dati condivisi con terze parti: <strong>nessuno</strong></li>
         <li>Tracciamento utente: <strong>nessuno</strong></li>
-    </ul>
+      </ul>
 
-    <h2>8. Minori</h2>
-    <p>Tasca non è destinata a minori di 13 anni e non raccoglie consapevolmente dati da minori.</p>
+      <h2>8. Minori</h2>
+      <p>Taska non è destinata a minori di 13 anni e non raccoglie consapevolmente dati da minori.</p>
 
-    <h2>9. Conformità normativa</h2>
-    <p>Tasca è progettata nel rispetto del Regolamento Generale sulla Protezione dei Dati (GDPR — UE 2016/679) e del California Consumer Privacy Act (CCPA). Poiché non vengono raccolti dati personali, non vi sono dati da richiedere, modificare o cancellare.</p>
+      <h2>9. Conformità normativa</h2>
+      <p>Taska è progettata nel rispetto del Regolamento Generale sulla Protezione dei Dati (GDPR — UE 2016/679) e del California Consumer Privacy Act (CCPA). Poiché non vengono raccolti dati personali, non vi sono dati da richiedere, modificare o cancellare.</p>
 
-    <h2>10. Modifiche alla policy</h2>
-    <p>Eventuali aggiornamenti a questa privacy policy saranno comunicati tramite aggiornamento dell'app e pubblicati su questa pagina.</p>
+      <h2>10. Modifiche alla policy</h2>
+      <p>Eventuali aggiornamenti a questa privacy policy saranno comunicati tramite aggiornamento dell'app e pubblicati su questa pagina.</p>
 
-    <h2>11. Contatti</h2>
-    <p>Per domande sulla privacy: <a href="mailto:tasca.app.support@gmail.com">tasca.app.support@gmail.com</a></p>
+      <h2>11. Contatti</h2>
+      <p>Per domande sulla privacy: <a href="mailto:tasca.app.support@gmail.com">tasca.app.support@gmail.com</a></p>
+    </div>
 
-    <footer>
-        <p>&copy; 2026 Pasquale Aceto. Tutti i diritti riservati.</p>
-    </footer>
+    <!-- EN version -->
+    <div data-lang="en" class="block-lang">
+      <h2>1. Data collection</h2>
+      <p>Taska <strong>does not collect, transmit or share any personal data</strong>. All data entered in the app (accounts, expenses, categories, balances) is stored exclusively on your device through Apple's SwiftData framework.</p>
+
+      <h2>2. Local storage</h2>
+      <p>Your data lives in the app's sandbox on your device. No information is sent to external servers, cloud services or third parties. Backups are created locally and shared only if the user exports them manually.</p>
+
+      <h2>3. Widgets</h2>
+      <p>The Home Screen and Lock Screen widgets read data via a local App Group. No data leaves the device.</p>
+
+      <h2>4. Security &amp; authentication</h2>
+      <p>App access can be protected with Face ID, Touch ID or a dedicated PIN. Taska uses Apple's LocalAuthentication framework; no biometric credentials are stored or processed by the app.</p>
+
+      <h2>5. Notifications</h2>
+      <p>Taska's notifications are exclusively local, generated by the device without involving any external server.</p>
+
+      <h2>6. Third-party services</h2>
+      <p>Taska integrates no analytics, advertising, tracking or crash-reporting SDKs, nor any other third-party services.</p>
+
+      <h2>7. Data collected — summary</h2>
+      <ul>
+        <li>Personal data collected: <strong>none</strong></li>
+        <li>Data shared with third parties: <strong>none</strong></li>
+        <li>User tracking: <strong>none</strong></li>
+      </ul>
+
+      <h2>8. Minors</h2>
+      <p>Taska is not intended for children under 13 and does not knowingly collect data from minors.</p>
+
+      <h2>9. Regulatory compliance</h2>
+      <p>Taska is designed in compliance with the General Data Protection Regulation (GDPR — EU 2016/679) and the California Consumer Privacy Act (CCPA). Since no personal data is collected, there is no data to request, modify or delete.</p>
+
+      <h2>10. Changes to this policy</h2>
+      <p>Any updates to this privacy policy will be communicated through an app update and published on this page.</p>
+
+      <h2>11. Contact</h2>
+      <p>For privacy questions: <a href="mailto:tasca.app.support@gmail.com">tasca.app.support@gmail.com</a></p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap-wide">
+    <div class="footer-grid">
+      <div class="col-brand">
+        <img src="assets/icon.png" alt="" />
+        <strong>Taska</strong>
+      </div>
+      <div>
+        <h6><span data-lang="it" class="active-lang">Prodotto</span><span data-lang="en">Product</span></h6>
+        <ul>
+          <li><a href="index.html#funzioni"><span data-lang="it" class="active-lang">Funzioni</span><span data-lang="en">Features</span></a></li>
+          <li><a href="index.html#prezzi"><span data-lang="it" class="active-lang">Prezzi</span><span data-lang="en">Pricing</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h6><span data-lang="it" class="active-lang">Aiuto</span><span data-lang="en">Help</span></h6>
+        <ul>
+          <li><a href="support.html"><span data-lang="it" class="active-lang">Supporto</span><span data-lang="en">Support</span></a></li>
+          <li><a href="mailto:tasca.app.support@gmail.com">Email</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6><span data-lang="it" class="active-lang">Legale</span><span data-lang="en">Legal</span></h6>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html"><span data-lang="it" class="active-lang">Termini d'uso</span><span data-lang="en">Terms of use</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h6><span data-lang="it" class="active-lang">Sviluppatore</span><span data-lang="en">Developer</span></h6>
+        <ul>
+          <li>Pasquale Aceto</li>
+          <li>Roma, Italia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Pasquale Aceto. <span data-lang="it" class="active-lang">Tutti i diritti riservati.</span><span data-lang="en">All rights reserved.</span></span>
+      <span class="right">
+        <span data-lang="it" class="active-lang">Costruito con SwiftUI &amp; SwiftData</span>
+        <span data-lang="en">Built with SwiftUI &amp; SwiftData</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
